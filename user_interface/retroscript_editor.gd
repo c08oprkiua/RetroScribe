@@ -12,6 +12,9 @@ func _ready() -> void:
 	if not script_path.is_empty():
 		open_script()
 
+func _on_which_lang_item_selected(index: int) -> void:
+	pass # Replace with function body.
+
 func open_script(path:String = script_path) -> void:
 	if FileAccess.file_exists(path):
 		name = path.get_file()

@@ -1,4 +1,4 @@
-extends CodeEdit
+extends RetroScriptCompilerBase
 ##A script compiler + text editor for RSDKv3 RetroScript
 class_name RSDKv3ScriptCompiler
 #region Enumerators
@@ -21,34 +21,6 @@ enum PARSEMODE {
 	FUNCTION     = 2,
 	##Parsing a switch statement
 	SWITCHREAD   = 3,
-}
-
-##Different kinds of script parsing errors. Errors are anything that will either not
-##compile, or will cause severe issues if compiled.
-enum ParseError {
-	##A function was defined as sub, but is not a valid sub function.
-	INVALID_SUB_FUNCTION,
-	##A function was declared, but never defined.
-	DEFINITION_NOT_FOUND,
-	##A function with this name has already been defined
-	DUPLICATE_DEFINITION,
-	##A function failed to compile
-	FUNC_COMPILE_FAILED,
-	##A function was used that is not defined in the current scope
-	FUNC_NOT_FOUND,
-	
-}
-
-##Different kinds of script parsing warnings. Warnings are for things that
-##won't hurt compilation, but are likely unintended by the programmer, and could
-##cause discrepencies between what's compiled and the behavior the programmer expects.
-enum ParseWarn {
-	##An alias or function was declared twice.
-	DUPLICATE_DECLARATION,
-	##The alias limit for compiling within actual RSDKv3 has been reached. This will
-	##not be an issue if you compile the script before using it in RSDKv3.
-	ALIAS_LIMIT_REACHED,
-	
 }
 
 enum VAR {
@@ -488,10 +460,6 @@ enum MODE {
 }
 
 #endregion
-#region Signals
-##Emitted when the compiler has parsed and updated its info.
-signal compiler_info_updated
-#endregion
 #region consts
 
 const COMMON_ALIAS_COUNT:int = 20
@@ -846,8 +814,7 @@ const builtin_aliases:Dictionary = {
 #endregion
 #region Static Vars
 
-#static var builtin_functions:Dictionary[StringName, FunctionInfo] = {
-static var builtin_functions:Dictionary = {
+static var builtin_functions:Dictionary[StringName, FunctionInfo] = {
 	&"End": FunctionInfo.new(0, 0),
 	&"Equal": FunctionInfo.new(2, 1),
 	&"Add": FunctionInfo.new(2, 2),
@@ -1022,8 +989,6 @@ var local_aliases:Dictionary[String, String] = {}
 
 var local_functions:Dictionary[StringName, FunctionInfo]
 
-var current_line:int
-
 var script_code:PackedInt32Array
 var script_code_pos:int
 var script_code_offset:int
@@ -1051,8 +1016,7 @@ func check_alias_text(input_text:String) -> bool:
 		return false
 	
 	if local_aliases.size() >= ALIAS_COUNT:
-		add_warning(current_line, -1)
-		#engine_parent.game_mode = RetroEnginev3Core.RetroStates.ENGINE_SCRIPTERROR
+		add_warning(current_line, ParseWarn.ALIAS_LIMIT_REACHED)
 		return false
 	
 	#delete all the spaces
@@ -1305,20 +1269,6 @@ func parse_script_text(start_line:int = 0, end_line:int = get_line_count()) -> v
 					check_case_number(line_string)
 			_:
 				continue
-
-func add_warning(line:int, warn_type:int) -> void:
-	match warn_type:
-		_:
-			push_warning("Warning for something on line ", line)
-
-func add_error(error_type:int, line:int = current_line) -> void:
-	match error_type:
-		ParseError.INVALID_SUB_FUNCTION:
-			push_error("The sub function on line ", line, " is not a recognized RSDKv3 sub function")
-		ParseError.FUNC_COMPILE_FAILED:
-			push_error("The function on line ", line, " failed to compile")
-		_:
-			push_error("Unimplemented error on line ", line, " with error number ", error_type)
 
 #endregion
 #region TextEditor

@@ -56,5 +56,24 @@ gutters_zero_pad_line_numbers = true
 script = ExtResource("3_1l6p3")
 enable_text_editor = true
 
+[node name="Info" type="HBoxContainer" parent="UISplit/CodeEditor"]
+visible = false
+layout_mode = 2
+
+[node name="Description" type="Label" parent="UISplit/CodeEditor/Info"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+vertical_alignment = 1
+
+[node name="Value" type="Label" parent="UISplit/CodeEditor/Info"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="SearchBox" type="HBoxContainer" parent="UISplit/CodeEditor"]
 layout_mode = 2
+
+[connection signal="item_selected" from="UISplit/Scroll/List/WhichLang" to="." method="_on_which_lang_item_selected"]
