@@ -21,6 +21,7 @@ var languages:Dictionary[StringName, RetroScriptSpec] = {
 	&"Foreverv4": RetroScriptSpec.new(),
 }
 
+@warning_ignore("unused_signal")
 signal switch_tab(to:int)
 
 func load_settings_from_ini() -> void:

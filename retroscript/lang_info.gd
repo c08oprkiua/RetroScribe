@@ -5,21 +5,21 @@ class_name RetroScriptSpec
 @export var alias_max_count:int
 
 @export_group("Strings")
+##The keywords of the RetroScript spec, such as function declarations and end statements.
 @export var keywords:PackedStringArray
 
 @export var event_declaration:String
-
+##The names and information for all recognized event callback functions.
 @export var events:Dictionary[StringName, FunctionInfo]
-
+##The names and information for all built in functions.
 @export var functions:Dictionary[StringName, FunctionInfo]
-##Key is the alias text, value is the text that replaces it upon parsing
-@export var aliases:Dictionary[String, String]
-##Keys are operators (eg. +=) in RetroScript, value is the name of the function they
-##are replaced by.
+##The name and corresponding value of all built in aliases.
+@export var aliases:Dictionary[String, StringName]
+##The text string and corresponding function they are an alias of for all math operators.
 @export var math_shorthands:Dictionary[String, StringName]
-
+##The names and information for all built in variables.
 @export var engine_variables:Dictionary[StringName, VarInfo]
-
+##The names and information for all built in engine objects.
 @export var engine_objects:Dictionary[StringName, Dictionary]
 
 @export_group("Syntax Colors", "color_")
@@ -29,9 +29,7 @@ class_name RetroScriptSpec
 @export var color_member:Color = Color.YELLOW_GREEN
 @export var color_member_var:Color = Color.AQUA
 
-func _init() -> void:
-	configure()
-
+##Configure a [CodeHighlighter] with this spec's information.
 func configure(highlight:CodeHighlighter = CodeHighlighter.new()) -> CodeHighlighter:
 	for funcs:String in functions.keys():
 		highlight.add_keyword_color(funcs, color_func)
@@ -57,6 +55,6 @@ func configure(highlight:CodeHighlighter = CodeHighlighter.new()) -> CodeHighlig
 	highlight.function_color = color_func
 	highlight.member_variable_color = color_member_var
 	highlight.number_color = color_math
-	highlight.symbol_color = Color.WHITE
+	highlight.symbol_color = Color.WEB_GRAY
 	
 	return highlight

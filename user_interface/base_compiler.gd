@@ -63,7 +63,7 @@ func add_warning(line:int, warn_type:int) -> void:
 
 func add_error(error_type:int, line:int = current_line) -> void:
 	var new_err:LogError = LogError.new()
-	new_err.type = error_type
+	new_err.type = error_type as ParseError
 	new_err.line = line
 	match error_type:
 		ParseError.INVALID_SUB_FUNCTION:
@@ -78,6 +78,7 @@ func add_error(error_type:int, line:int = current_line) -> void:
 			new_err.error_text = "No description implemented for error on line " + str(line) + " with error number " + str(error_type)
 	push_error(new_err.error_text)
 
+@warning_ignore("unused_parameter")
 func parse_script_text(start_line:int = 0, end_line:int = get_line_count()) -> void:
 	print("Please redefine this function in a derived class")
 
@@ -90,8 +91,8 @@ func setup_retroscript_editor() -> void:
 	
 	lang_db.configure(retroscript_highlighter)
 	
-	if not has_comment_delimiter("//"):
-		add_comment_delimiter("//", "")
+	if not has_comment_delimiter("/"):
+		add_comment_delimiter("/", "")
 	
 	parse_script_text()
 	syntax_highlighter = retroscript_highlighter
