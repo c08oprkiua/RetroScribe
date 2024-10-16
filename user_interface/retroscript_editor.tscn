@@ -31,7 +31,6 @@ layout_mode = 2
 
 [node name="WhichLang" type="OptionButton" parent="UISplit/Scroll/List"]
 layout_mode = 2
-selected = 0
 
 [node name="FunctionList" type="VBoxContainer" parent="UISplit/Scroll/List"]
 layout_mode = 2
@@ -45,11 +44,11 @@ size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_5pwx1")
 wrap_mode = 1
 minimap_draw = true
+symbol_lookup_on_click = true
 gutters_draw_bookmarks = true
 gutters_draw_line_numbers = true
 gutters_zero_pad_line_numbers = true
 script = ExtResource("3_1l6p3")
-enable_text_editor = true
 
 [node name="Info" type="HBoxContainer" parent="UISplit/CodeEditor"]
 visible = false

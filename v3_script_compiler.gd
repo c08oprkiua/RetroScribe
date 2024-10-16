@@ -465,31 +465,6 @@ enum MODE {
 const COMMON_ALIAS_COUNT:int = 20
 const ALIAS_COUNT:int = COMMON_ALIAS_COUNT + 96
 
-const script_evaluation_tokens:Dictionary = {
-	r"=": &"Equal",
-	r">": &"IfGreater",
-	r"<": &"IfLower",
-	
-	r"+=": &"Add", 
-	r"-=": &"Sub", 
-	r"++": &"Inc", 
-	r"--": &"Dec", 
-	r"*=": &"Mul",
-	r"/=": &"Div", 
-	r"&=": &"And", 
-	r"|=": &"Or", 
-	r"^=": &"Xor", 
-	r"%=": &"Mod", 
-	
-	r"==": &"IfEqual",
-	r">=": &"IfGreaterOrEqual",
-	r"<=": &"IfLowerOrEqual",  
-	r"!=": &"IfNotEqual",
-	
-	r">>=": &"ShR", 
-	r"<<=": &"ShL", 
-}
-
 const if_to_while:Dictionary = {
 	&"IfEqual": &"WEqual",
 	&"IfGreater": &"WGreater",
@@ -498,29 +473,6 @@ const if_to_while:Dictionary = {
 	&"IfLowerOrEqual": &"WLowerOrEqual",
 	&"IfNotEqual": &"WNotEqual",
 }
-
-const retroscript_keywords:PackedStringArray = [
-	"alias",
-	"platform", "endplatform",
-	"end",
-	"sub", "endsub",
-	"function", "endfunction",
-	"if", "else",
-	"switch", "case", "break", "endswitch",
-	"for", "while", "loop",
-	"true", "false",
-]
-
-const retroscript_subs:PackedStringArray = [
-	"ObjectMain",
-	"ObjectPlayerInteraction",
-	"ObjectDraw",
-	"ObjectStartup",
-	
-	"RSDKEdit",
-	"RSDKDraw",
-	"RSDKLoad"
-]
 
 const engine_object_types:PackedStringArray = [
 	"Object", 
@@ -776,215 +728,198 @@ const variable_names:PackedStringArray = [
 ]
 
 #const builtin_aliases:Dictionary[String, String] = {
-const builtin_aliases:Dictionary = {
-	"true": "1",
-	"false": "0",
-	"FX_SCALE": "0",
-	"FX_ROTATE": "1",
-	"FX_ROTOZOOM": "2",
-	"FX_INK": "3",
-	"PRESENTATION_STAGE": "0",
-	"REGULAR_STAGE": "1",
-	"BONUS_STAGE": "2",
-	"SPECIAL_STAGE": "3",
-	"MENU_1": "0",
-	"MENU_2": "1",
-	"C_TOUCH": "0",
-	"C_BOX": "1",
-	"C_BOX2": "2",
-	"C_PLATFORM": "3",
-	"MAT_WORLD": "0",
-	"MAT_VIEW": "1",
-	"MAT_TEMP": "2",
-	"FX_FLIP": "5",
-	"FACING_LEFT": "1",
-	"FACING_RIGHT": "0",
-	"STAGE_PAUSED": "2",
-	"STAGE_RUNNING": "1",
-	"RESET_GAME": "2",
-	"RETRO_WIN": "0",
-	"RETRO_OSX": "1",
-	"RETRO_XBOX_360": "2",
-	"RETRO_PS3": "3",
-	"RETRO_iOS": "4",
-	"RETRO_ANDROID": "5",
-	"RETRO_WP7": "6",
-}
+	#"true": "1",
+	#"false": "0",
+	#"FX_SCALE": "0",
+	#"FX_ROTATE": "1",
+	#"FX_ROTOZOOM": "2",
+	#"FX_INK": "3",
+	#"PRESENTATION_STAGE": "0",
+	#"REGULAR_STAGE": "1",
+	#"BONUS_STAGE": "2",
+	#"SPECIAL_STAGE": "3",
+	#"MENU_1": "0",
+	#"MENU_2": "1",
+	#"C_TOUCH": "0",
+	#"C_BOX": "1",
+	#"C_BOX2": "2",
+	#"C_PLATFORM": "3",
+	#"MAT_WORLD": "0",
+	#"MAT_VIEW": "1",
+	#"MAT_TEMP": "2",
+	#"FX_FLIP": "5",
+	#"FACING_LEFT": "1",
+	#"FACING_RIGHT": "0",
+	#"STAGE_PAUSED": "2",
+	#"STAGE_RUNNING": "1",
+	#"RESET_GAME": "2",
+	#"RETRO_WIN": "0",
+	#"RETRO_OSX": "1",
+	#"RETRO_XBOX_360": "2",
+	#"RETRO_PS3": "3",
+	#"RETRO_iOS": "4",
+	#"RETRO_ANDROID": "5",
+	#"RETRO_WP7": "6",
+#}
 
 #endregion
 #region Static Vars
 
-static var builtin_functions:Dictionary[StringName, FunctionInfo] = {
-	&"End": FunctionInfo.new(0, 0),
-	&"Equal": FunctionInfo.new(2, 1),
-	&"Add": FunctionInfo.new(2, 2),
-	&"Sub": FunctionInfo.new(2, 3),
-	&"Inc": FunctionInfo.new(1, 4),
-	&"Dec": FunctionInfo.new(1, 5),
-	&"Mul": FunctionInfo.new(2, 6),
-	&"Div": FunctionInfo.new(2, 7),
-	&"ShR": FunctionInfo.new(2, 8),
-	&"ShL": FunctionInfo.new(2, 9),
-	&"And": FunctionInfo.new(2, 10),
-	&"Or": FunctionInfo.new(2, 11),
-	&"Xor": FunctionInfo.new(2, 12),
-	&"Mod": FunctionInfo.new(2, 13),
-	&"FlipSign": FunctionInfo.new(1, 14),
-	
-	&"CheckEqual": FunctionInfo.new(2, 15),
-	&"CheckGreater": FunctionInfo.new(2, 16),
-	&"CheckLower": FunctionInfo.new(2, 17),
-	&"CheckNotEqual": FunctionInfo.new(2, 18),
-	
-	&"IfEqual": FunctionInfo.new(3, 19),
-	&"IfGreater": FunctionInfo.new(3, 20),
-	&"IfGreaterOrEqual": FunctionInfo.new(3, 21),
-	&"IfLower": FunctionInfo.new(3, 22),
-	&"IfLowerOrEqual": FunctionInfo.new(3, 23),
-	&"IfNotEqual": FunctionInfo.new(3, 24),
-	
-	&"else": FunctionInfo.new(0, 25),
-	&"endif": FunctionInfo.new(0, 26),
-	
-	&"WEqual": FunctionInfo.new(3, 27),
-	&"WGreater": FunctionInfo.new(3, 28),
-	&"WGreaterOrEqual": FunctionInfo.new(3, 29),
-	&"WLower": FunctionInfo.new(3, 30),
-	&"WLowerOrEqual": FunctionInfo.new(3, 31),
-	&"WNotEqual": FunctionInfo.new(3, 32),
-	&"loop": FunctionInfo.new(0, 33),
-	&"switch": FunctionInfo.new(2, 34),
-	&"break": FunctionInfo.new(0, 35),
-	&"endswitch": FunctionInfo.new(0, 36),
-	&"Rand": FunctionInfo.new(2, 37),
-	&"Sin": FunctionInfo.new(2, 38),
-	&"Cos": FunctionInfo.new(2, 39),
-	&"Sin256": FunctionInfo.new(2, 40),
-	&"Cos256": FunctionInfo.new(2, 41),
-	&"SinChange": FunctionInfo.new(5, 42),
-	&"CosChange": FunctionInfo.new(5, 43),
-	&"ATan2": FunctionInfo.new(3, 44),
-	&"Interpolate": FunctionInfo.new(4, 45),
-	&"InterpolateXY": FunctionInfo.new(7, 46),
-	&"LoadSpriteSheet": FunctionInfo.new(1, 47),
-	&"RemoveSpriteSheet": FunctionInfo.new(1, 48),
-	&"DrawSprite": FunctionInfo.new(1, 49),
-	&"DrawSpriteXY": FunctionInfo.new(3, 50),
-	&"DrawSpriteScreenXY": FunctionInfo.new(3, 51),
-	&"DrawTintRect": FunctionInfo.new(4, 52),
-	&"DrawNumbers": FunctionInfo.new(7, 53),
-	&"DrawActName": FunctionInfo.new(7, 54),
-	&"DrawMenu": FunctionInfo.new(3, 55),
-	&"SpriteFrame": FunctionInfo.new(6, 56),
-	&"EditFrame": FunctionInfo.new(7, 57),
-	&"LoadPalette": FunctionInfo.new(5, 58),
-	&"RotatePalette": FunctionInfo.new(3, 59),
-	&"SetScreenFade": FunctionInfo.new(4, 60),
-	&"SetActivePalette": FunctionInfo.new(3, 61),
-	&"SetPaletteFade": FunctionInfo.new(7, 62),
-	&"CopyPalette": FunctionInfo.new(2, 63),
-	&"ClearScreen": FunctionInfo.new(1, 64),
-	&"DrawSpriteFX": FunctionInfo.new(4, 65),
-	&"DrawSpriteScreenFX": FunctionInfo.new(4, 66),
-	&"LoadAnimation": FunctionInfo.new(1, 67),
-	&"SetupMenu": FunctionInfo.new(4, 68),
-	&"AddMenuEntry": FunctionInfo.new(3, 69),
-	&"EditMenuEntry": FunctionInfo.new(4, 70),
-	&"LoadStage": FunctionInfo.new(0, 71),
-	&"DrawRect": FunctionInfo.new(8, 72),
-	&"ResetObjectEntity": FunctionInfo.new(5, 73),
-	&"PlayerObjectCollision": FunctionInfo.new(5, 74),
-	&"CreateTempObject": FunctionInfo.new(4, 75),
-	&"BindPlayerToObject": FunctionInfo.new(2, 76),
-	&"PlayerTileCollision": FunctionInfo.new(0, 77),
-	&"ProcessPlayerControl": FunctionInfo.new(0, 78),
-	&"ProcessAnimation": FunctionInfo.new(0, 79),
-	&"DrawObjectAnimation": FunctionInfo.new(0, 80),
-	&"DrawPlayerAnimation": FunctionInfo.new(0, 81),
-	
-	&"SetMusicTrack": FunctionInfo.new(3, 82),
-	&"PlayMusic": FunctionInfo.new(1, 83),
-	&"StopMusic": FunctionInfo.new(0, 84),
-	&"PlaySfx": FunctionInfo.new(2, 85),
-	&"StopSfx": FunctionInfo.new(1, 86),
-	&"SetSfxAttributes": FunctionInfo.new(3, 87),
-	
-	&"ObjectTileCollision": FunctionInfo.new(4, 88),
-	&"ObjectTileGrip": FunctionInfo.new(4, 89),
-	
-	&"LoadVideo": FunctionInfo.new(1, 90),
-	&"NextVideoFrame": FunctionInfo.new(0, 91),
-	
-	&"PlayStageSfx": FunctionInfo.new(2, 92),
-	&"StopStageSfx": FunctionInfo.new(1, 93),
-	&"Not": FunctionInfo.new(1, 94),
-	
-	&"Draw3DScene": FunctionInfo.new(0, 95),
-	&"SetIdentityMatrix": FunctionInfo.new(1, 96),
-	&"MatrixMultiply": FunctionInfo.new(2, 97),
-	&"MatrixTranslateXYZ": FunctionInfo.new(4, 98),
-	&"MatrixScaleXYZ": FunctionInfo.new(4, 99),
-	&"MatrixRotateX": FunctionInfo.new(2, 100),
-	&"MatrixRotateY": FunctionInfo.new(2, 101),
-	&"MatrixRotateZ": FunctionInfo.new(2, 102),
-	&"MatrixRotateXYZ": FunctionInfo.new(4, 103),
-	&"TransformVertices": FunctionInfo.new(3, 104),
-	
-	&"CallFunction": FunctionInfo.new(1, 105),
-	&"EndFunction": FunctionInfo.new(0, 106),
-	
-	&"SetLayerDeformation": FunctionInfo.new(6, 107),
-	&"CheckTouchRect": FunctionInfo.new(4, 108),
-	&"GetTileLayerEntry": FunctionInfo.new(4, 109),
-	&"SetTileLayerEntry": FunctionInfo.new(4, 110),
-	
-	&"GetBit": FunctionInfo.new(3, 111),
-	&"SetBit": FunctionInfo.new(3, 112),
-	
-	&"PauseMusic": FunctionInfo.new(0, 113),
-	&"ResumeMusic": FunctionInfo.new(0, 114),
-	&"ClearDrawList": FunctionInfo.new(1, 115),
-	&"AddDrawListEntityRef": FunctionInfo.new(2, 116),
-	&"GetDrawListEntityRef": FunctionInfo.new(3, 117),
-	&"SetDrawListEntityRef": FunctionInfo.new(3, 118),
-	&"Get16x16TileInfo": FunctionInfo.new(4, 119),
-	&"Copy16x16Tile": FunctionInfo.new(2, 120),
-	&"Set16x16TileInfo": FunctionInfo.new(4, 121),
-	&"GetAnimationByName": FunctionInfo.new(2, 122),
-	
-	&"ReadSaveRAM": FunctionInfo.new(0, 123),
-	&"WriteSaveRAM": FunctionInfo.new(0, 124),
-	&"LoadTextFont": FunctionInfo.new(1, 125),
-	&"LoadTextFile": FunctionInfo.new(3, 126),
-	
-	&"DrawText": FunctionInfo.new(7, 127),
-	&"GetTextInfo": FunctionInfo.new(5, 128),
-	&"GetVersionNumber": FunctionInfo.new(2, 129),
-	&"SetAchievement": FunctionInfo.new(2, 130),
-	&"SetLeaderboard": FunctionInfo.new(2, 131),
-	&"LoadOnlineMenu": FunctionInfo.new(1, 132),
-	&"EngineCallback": FunctionInfo.new(1, 133),
-	&"HapticEffect": FunctionInfo.new(4, 134),
-}
+#static var builtin_functions:Dictionary[StringName, FunctionInfo] = {
+	#&"End": FunctionInfo.new(0, 0),
+	#&"Equal": FunctionInfo.new(2, 1),
+	#&"Add": FunctionInfo.new(2, 2),
+	#&"Sub": FunctionInfo.new(2, 3),
+	#&"Inc": FunctionInfo.new(1, 4),
+	#&"Dec": FunctionInfo.new(1, 5),
+	#&"Mul": FunctionInfo.new(2, 6),
+	#&"Div": FunctionInfo.new(2, 7),
+	#&"ShR": FunctionInfo.new(2, 8),
+	#&"ShL": FunctionInfo.new(2, 9),
+	#&"And": FunctionInfo.new(2, 10),
+	#&"Or": FunctionInfo.new(2, 11),
+	#&"Xor": FunctionInfo.new(2, 12),
+	#&"Mod": FunctionInfo.new(2, 13),
+	#&"FlipSign": FunctionInfo.new(1, 14),
+	#
+	#&"CheckEqual": FunctionInfo.new(2, 15),
+	#&"CheckGreater": FunctionInfo.new(2, 16),
+	#&"CheckLower": FunctionInfo.new(2, 17),
+	#&"CheckNotEqual": FunctionInfo.new(2, 18),
+	#
+	#&"IfEqual": FunctionInfo.new(3, 19),
+	#&"IfGreater": FunctionInfo.new(3, 20),
+	#&"IfGreaterOrEqual": FunctionInfo.new(3, 21),
+	#&"IfLower": FunctionInfo.new(3, 22),
+	#&"IfLowerOrEqual": FunctionInfo.new(3, 23),
+	#&"IfNotEqual": FunctionInfo.new(3, 24),
+	#
+	#&"else": FunctionInfo.new(0, 25),
+	#&"endif": FunctionInfo.new(0, 26),
+	#
+	#&"WEqual": FunctionInfo.new(3, 27),
+	#&"WGreater": FunctionInfo.new(3, 28),
+	#&"WGreaterOrEqual": FunctionInfo.new(3, 29),
+	#&"WLower": FunctionInfo.new(3, 30),
+	#&"WLowerOrEqual": FunctionInfo.new(3, 31),
+	#&"WNotEqual": FunctionInfo.new(3, 32),
+	#&"loop": FunctionInfo.new(0, 33),
+	#&"switch": FunctionInfo.new(2, 34),
+	#&"break": FunctionInfo.new(0, 35),
+	#&"endswitch": FunctionInfo.new(0, 36),
+	#&"Rand": FunctionInfo.new(2, 37),
+	#&"Sin": FunctionInfo.new(2, 38),
+	#&"Cos": FunctionInfo.new(2, 39),
+	#&"Sin256": FunctionInfo.new(2, 40),
+	#&"Cos256": FunctionInfo.new(2, 41),
+	#&"SinChange": FunctionInfo.new(5, 42),
+	#&"CosChange": FunctionInfo.new(5, 43),
+	#&"ATan2": FunctionInfo.new(3, 44),
+	#&"Interpolate": FunctionInfo.new(4, 45),
+	#&"InterpolateXY": FunctionInfo.new(7, 46),
+	#&"LoadSpriteSheet": FunctionInfo.new(1, 47),
+	#&"RemoveSpriteSheet": FunctionInfo.new(1, 48),
+	#&"DrawSprite": FunctionInfo.new(1, 49),
+	#&"DrawSpriteXY": FunctionInfo.new(3, 50),
+	#&"DrawSpriteScreenXY": FunctionInfo.new(3, 51),
+	#&"DrawTintRect": FunctionInfo.new(4, 52),
+	#&"DrawNumbers": FunctionInfo.new(7, 53),
+	#&"DrawActName": FunctionInfo.new(7, 54),
+	#&"DrawMenu": FunctionInfo.new(3, 55),
+	#&"SpriteFrame": FunctionInfo.new(6, 56),
+	#&"EditFrame": FunctionInfo.new(7, 57),
+	#&"LoadPalette": FunctionInfo.new(5, 58),
+	#&"RotatePalette": FunctionInfo.new(3, 59),
+	#&"SetScreenFade": FunctionInfo.new(4, 60),
+	#&"SetActivePalette": FunctionInfo.new(3, 61),
+	#&"SetPaletteFade": FunctionInfo.new(7, 62),
+	#&"CopyPalette": FunctionInfo.new(2, 63),
+	#&"ClearScreen": FunctionInfo.new(1, 64),
+	#&"DrawSpriteFX": FunctionInfo.new(4, 65),
+	#&"DrawSpriteScreenFX": FunctionInfo.new(4, 66),
+	#&"LoadAnimation": FunctionInfo.new(1, 67),
+	#&"SetupMenu": FunctionInfo.new(4, 68),
+	#&"AddMenuEntry": FunctionInfo.new(3, 69),
+	#&"EditMenuEntry": FunctionInfo.new(4, 70),
+	#&"LoadStage": FunctionInfo.new(0, 71),
+	#&"DrawRect": FunctionInfo.new(8, 72),
+	#&"ResetObjectEntity": FunctionInfo.new(5, 73),
+	#&"PlayerObjectCollision": FunctionInfo.new(5, 74),
+	#&"CreateTempObject": FunctionInfo.new(4, 75),
+	#&"BindPlayerToObject": FunctionInfo.new(2, 76),
+	#&"PlayerTileCollision": FunctionInfo.new(0, 77),
+	#&"ProcessPlayerControl": FunctionInfo.new(0, 78),
+	#&"ProcessAnimation": FunctionInfo.new(0, 79),
+	#&"DrawObjectAnimation": FunctionInfo.new(0, 80),
+	#&"DrawPlayerAnimation": FunctionInfo.new(0, 81),
+	#
+	#&"SetMusicTrack": FunctionInfo.new(3, 82),
+	#&"PlayMusic": FunctionInfo.new(1, 83),
+	#&"StopMusic": FunctionInfo.new(0, 84),
+	#&"PlaySfx": FunctionInfo.new(2, 85),
+	#&"StopSfx": FunctionInfo.new(1, 86),
+	#&"SetSfxAttributes": FunctionInfo.new(3, 87),
+	#
+	#&"ObjectTileCollision": FunctionInfo.new(4, 88),
+	#&"ObjectTileGrip": FunctionInfo.new(4, 89),
+	#
+	#&"LoadVideo": FunctionInfo.new(1, 90),
+	#&"NextVideoFrame": FunctionInfo.new(0, 91),
+	#
+	#&"PlayStageSfx": FunctionInfo.new(2, 92),
+	#&"StopStageSfx": FunctionInfo.new(1, 93),
+	#&"Not": FunctionInfo.new(1, 94),
+	#
+	#&"Draw3DScene": FunctionInfo.new(0, 95),
+	#&"SetIdentityMatrix": FunctionInfo.new(1, 96),
+	#&"MatrixMultiply": FunctionInfo.new(2, 97),
+	#&"MatrixTranslateXYZ": FunctionInfo.new(4, 98),
+	#&"MatrixScaleXYZ": FunctionInfo.new(4, 99),
+	#&"MatrixRotateX": FunctionInfo.new(2, 100),
+	#&"MatrixRotateY": FunctionInfo.new(2, 101),
+	#&"MatrixRotateZ": FunctionInfo.new(2, 102),
+	#&"MatrixRotateXYZ": FunctionInfo.new(4, 103),
+	#&"TransformVertices": FunctionInfo.new(3, 104),
+	#
+	#&"CallFunction": FunctionInfo.new(1, 105),
+	#&"EndFunction": FunctionInfo.new(0, 106),
+	#
+	#&"SetLayerDeformation": FunctionInfo.new(6, 107),
+	#&"CheckTouchRect": FunctionInfo.new(4, 108),
+	#&"GetTileLayerEntry": FunctionInfo.new(4, 109),
+	#&"SetTileLayerEntry": FunctionInfo.new(4, 110),
+	#
+	#&"GetBit": FunctionInfo.new(3, 111),
+	#&"SetBit": FunctionInfo.new(3, 112),
+	#
+	#&"PauseMusic": FunctionInfo.new(0, 113),
+	#&"ResumeMusic": FunctionInfo.new(0, 114),
+	#&"ClearDrawList": FunctionInfo.new(1, 115),
+	#&"AddDrawListEntityRef": FunctionInfo.new(2, 116),
+	#&"GetDrawListEntityRef": FunctionInfo.new(3, 117),
+	#&"SetDrawListEntityRef": FunctionInfo.new(3, 118),
+	#&"Get16x16TileInfo": FunctionInfo.new(4, 119),
+	#&"Copy16x16Tile": FunctionInfo.new(2, 120),
+	#&"Set16x16TileInfo": FunctionInfo.new(4, 121),
+	#&"GetAnimationByName": FunctionInfo.new(2, 122),
+	#
+	#&"ReadSaveRAM": FunctionInfo.new(0, 123),
+	#&"WriteSaveRAM": FunctionInfo.new(0, 124),
+	#&"LoadTextFont": FunctionInfo.new(1, 125),
+	#&"LoadTextFile": FunctionInfo.new(3, 126),
+	#
+	#&"DrawText": FunctionInfo.new(7, 127),
+	#&"GetTextInfo": FunctionInfo.new(5, 128),
+	#&"GetVersionNumber": FunctionInfo.new(2, 129),
+	#&"SetAchievement": FunctionInfo.new(2, 130),
+	#&"SetLeaderboard": FunctionInfo.new(2, 131),
+	#&"LoadOnlineMenu": FunctionInfo.new(1, 132),
+	#&"EngineCallback": FunctionInfo.new(1, 133),
+	#&"HapticEffect": FunctionInfo.new(4, 134),
+#}
 
-#endregion
-#region Export Vars
-
-
-##If true, features specifically for the text editor are enabled.
-##Leave disabled if you are only using this node as a compiler.
-@export var enable_text_editor:bool = false
-
-@export var func_color:Color = Color.ROYAL_BLUE
-@export var eval_token_color:Color = Color.YELLOW
-@export var keyword_color:Color = Color.RED
-@export var member_color:Color = Color.YELLOW_GREEN
-@export var member_var_color:Color = Color.AQUA
 #endregion
 #region Local Vars
-
-var retroscript_highlighter:CodeHighlighter = CodeHighlighter.new()
-
 var local_aliases:Dictionary[String, String] = {}
 
 var local_functions:Dictionary[StringName, FunctionInfo]
@@ -1000,14 +935,6 @@ var jump_table_stack:PackedInt32Array
 var jump_table_stack_pos:int
 
 var jump_table_offset:int
-
-
-#endregion
-#region Functions: Godot 
-
-func _ready() -> void:
-	setup_retroscript_editor()
-
 #endregion
 #region Functions: Compiler
 
@@ -1026,7 +953,7 @@ func check_alias_text(input_text:String) -> bool:
 	var alias_name:String = alias_info_array[1].get_slice("//", 0) #cull comments
 	var alias_value:String = alias_info_array[0]
 	
-	retroscript_highlighter.add_keyword_color(alias_name, member_color)
+	retroscript_highlighter.add_keyword_color(alias_name, lang_db.color_member)
 	
 	local_aliases[alias_name] = alias_value
 	
@@ -1039,12 +966,12 @@ func convert_math_to_function(in_text:String) -> String:
 	
 	var out_string:String = in_text
 	#This technically checks above modulus, which the original does not
-	for operations:String in  script_evaluation_tokens.keys():
+	for operations:String in lang_db.math_shorthands.keys():
 		if in_text.contains(operations):
 			token_string = operations
-			token_id = script_evaluation_tokens.get(token_string)
+			token_id = lang_db.math_shorthands.get(token_string)
 	
-	var operation_info:FunctionInfo = builtin_functions.get(token_id, null)
+	var operation_info:FunctionInfo = lang_db.functions.get(token_id, null)
 	if token_id and is_instance_valid(operation_info) and operation_info.opcode_size < 3:
 		var args:String
 		args = in_text.replace(token_string, ", ")
@@ -1058,12 +985,15 @@ func convert_if_while_statement(in_text:String) -> String:
 		var compare_op:StringName
 		var op_pos:int
 		
-		for each_op:String in script_evaluation_tokens.keys():
+		for each_op:String in lang_db.math_shorthands.keys():
 			if in_text.find(each_op) > -1:
 				op_pos = in_text.find(each_op)
 				compare_op = each_op
 		
-		var if_token:StringName = script_evaluation_tokens.get(compare_op)
+		if compare_op.is_empty():
+			return in_text
+		
+		var if_token:StringName = lang_db.math_shorthands.get(compare_op)
 		var func_name:String
 		
 		var formatted_args:String = in_text.erase(op_pos, compare_op.length()).insert(op_pos, ",")
@@ -1072,7 +1002,7 @@ func convert_if_while_statement(in_text:String) -> String:
 			func_name = if_to_while.get(if_token)
 			formatted_args = formatted_args.trim_prefix("while")
 		else: #begins with if
-			func_name = script_evaluation_tokens.get(compare_op)
+			func_name = lang_db.math_shorthands.get(compare_op)
 			formatted_args = formatted_args.trim_prefix("if")
 		
 		var out_string:String = func_name + "(" + formatted_args + ")"
@@ -1096,7 +1026,7 @@ func compile_function(in_text:String) -> void:
 	if not in_text.contains("("):
 		print("Func err -1: ", in_text)
 	
-	if not builtin_functions.has(func_name):
+	if not lang_db.functions.has(func_name):
 		print("Func err: ", func_name)
 		add_error(ParseError.FUNC_NOT_FOUND)
 		return
@@ -1211,7 +1141,7 @@ func parse_script_text(start_line:int = 0, end_line:int = get_line_count()) -> v
 					set_line_as_bookmarked(each_line, true)
 					
 					if not retroscript_highlighter.has_keyword_color(new_func_name):
-						retroscript_highlighter.add_keyword_color(new_func_name, func_color)
+						retroscript_highlighter.add_keyword_color(new_func_name, lang_db.color_func)
 					
 					local_functions[new_func_name] = declared_function
 					parse_mode = PARSEMODE.FUNCTION
@@ -1221,7 +1151,7 @@ func parse_script_text(start_line:int = 0, end_line:int = get_line_count()) -> v
 					var new_function:FunctionInfo = local_functions.get_or_add(new_func_name, FunctionInfo.new())
 					new_function.opcode_size = 0
 					
-					retroscript_highlighter.add_keyword_color(new_func_name, func_color)
+					retroscript_highlighter.add_keyword_color(new_func_name, lang_db.color_func)
 					local_functions[new_func_name] = new_function
 			
 			PARSEMODE.PLATFORMSKIP:
@@ -1272,48 +1202,8 @@ func parse_script_text(start_line:int = 0, end_line:int = get_line_count()) -> v
 
 #endregion
 #region TextEditor
-##Sets up all the syntax detection for constants and builtins of RetroScript v3
-func setup_retroscript_editor() -> void:
-	if not is_connected("lines_edited_from", when_lines_edited):
-		connect("lines_edited_from", when_lines_edited)
-	
-	for funcs:String in builtin_functions.keys():
-		retroscript_highlighter.add_keyword_color(funcs, func_color)
-	
-	for sub_funcs:String in retroscript_subs:
-		retroscript_highlighter.add_keyword_color(sub_funcs, func_color)
-	
-	for evals:String in script_evaluation_tokens.keys():
-		retroscript_highlighter.add_keyword_color(evals, eval_token_color)
-	
-	for members:String in engine_object_types:
-		retroscript_highlighter.add_member_keyword_color(members, member_color)
-	
-	for variables:String in variable_names:
-		retroscript_highlighter.add_member_keyword_color(variables, member_var_color)
-	
-	for keywords:String in retroscript_keywords:
-		retroscript_highlighter.add_keyword_color(keywords, keyword_color)
-	
-	for global_aliases:String in builtin_aliases.keys():
-		retroscript_highlighter.add_keyword_color(global_aliases, keyword_color)
-	
-	retroscript_highlighter.function_color = func_color
-	retroscript_highlighter.member_variable_color = member_var_color
-	retroscript_highlighter.number_color = Color.HOT_PINK
-	retroscript_highlighter.symbol_color = Color.WHITE
-	
-	if not has_comment_delimiter("//"):
-		add_comment_delimiter("//", "")
-	
-	parse_script_text()
-	syntax_highlighter = retroscript_highlighter
-	compiler_info_updated.emit()
 
-func when_lines_edited(from_line: int, to_line: int) -> void:
-	
-	parse_script_text(from_line, to_line)
-	syntax_highlighter = retroscript_highlighter
-	compiler_info_updated.emit()
+
+
 
 #endregion

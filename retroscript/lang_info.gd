@@ -1,4 +1,4 @@
-extends CodeHighlighter
+extends Resource
 
 class_name RetroScriptSpec
 
@@ -32,29 +32,31 @@ class_name RetroScriptSpec
 func _init() -> void:
 	configure()
 
-func configure() -> void:
+func configure(highlight:CodeHighlighter = CodeHighlighter.new()) -> CodeHighlighter:
 	for funcs:String in functions.keys():
-		add_keyword_color(funcs, color_func)
+		highlight.add_keyword_color(funcs, color_func)
 	
 	for sub_funcs:String in events:
-		add_keyword_color(sub_funcs, color_func)
+		highlight.add_keyword_color(sub_funcs, color_func)
 	
 	for evals:String in math_shorthands.keys():
-		add_keyword_color(evals, color_math)
+		highlight.add_keyword_color(evals, color_math)
 	
 	for members:String in engine_objects.keys():
-		add_member_keyword_color(members, color_member)
+		highlight.add_member_keyword_color(members, color_member)
 	
 	for each_variable:String in engine_variables:
-		add_member_keyword_color(each_variable, color_member_var)
+		highlight.add_member_keyword_color(each_variable, color_member_var)
 	
 	for each_keyword:String in keywords:
-		add_keyword_color(each_keyword, color_keyword)
+		highlight.add_keyword_color(each_keyword, color_keyword)
 	
 	for global_aliases:String in aliases.keys():
-		add_keyword_color(global_aliases, color_keyword)
+		highlight.add_keyword_color(global_aliases, color_keyword)
 	
-	function_color = color_func
-	member_variable_color = color_member_var
-	number_color = color_math
-	symbol_color = Color.WHITE
+	highlight.function_color = color_func
+	highlight.member_variable_color = color_member_var
+	highlight.number_color = color_math
+	highlight.symbol_color = Color.WHITE
+	
+	return highlight

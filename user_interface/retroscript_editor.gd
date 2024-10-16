@@ -8,26 +8,21 @@ class_name RetroScriptEditor
 
 var script_path:String
 
-var this_editor_lang:int
-
-static var lang_index:Dictionary[int, StringName]
-
-static func _static_init() -> void:
-	var index:int = 0
-	for langs:StringName in Central.languages.keys():
-		lang_index[index] = langs
-		index += 1
-
 func _ready() -> void:
 	code_space.connect("compiler_info_updated", refresh_jump_button_list)
-	if not script_path.is_empty():
-		open_script()
 	for langs:String in Central.languages.keys():
 		language_selector.add_item(langs)
+	if not script_path.is_empty():
+		open_script()
 
-func _on_which_lang_item_selected(index: int) -> void:
-	this_editor_lang = index
-	code_space.syntax_highlighter = Central.languages.get(lang_index.get(index))
+func _on_which_lang_item_selected(index:int) -> void:
+	var lang_key:StringName = language_selector.get_item_text(index)
+	var lang:RetroScriptSpec = Central.languages.get(lang_key)
+	
+	if not lang.resource_path.is_empty():
+		print(lang_key)
+		code_space.lang_db = lang
+		code_space.setup_retroscript_editor()
 
 func open_script(path:String = script_path) -> void:
 	if FileAccess.file_exists(path):

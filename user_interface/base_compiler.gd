@@ -52,6 +52,10 @@ var warnings:Array[LogWarn]
 
 var current_line:int
 
+var lang_db:RetroScriptSpec = RetroScriptSpec.new()
+
+var retroscript_highlighter:CodeHighlighter = CodeHighlighter.new()
+
 func add_warning(line:int, warn_type:int) -> void:
 	match warn_type:
 		_:
@@ -76,3 +80,24 @@ func add_error(error_type:int, line:int = current_line) -> void:
 
 func parse_script_text(start_line:int = 0, end_line:int = get_line_count()) -> void:
 	print("Please redefine this function in a derived class")
+
+##Sets up all the syntax detection for constants and builtins
+func setup_retroscript_editor() -> void:
+	if not is_connected("lines_edited_from", when_lines_edited):
+		connect("lines_edited_from", when_lines_edited)
+	
+	retroscript_highlighter = CodeHighlighter.new()
+	
+	lang_db.configure(retroscript_highlighter)
+	
+	if not has_comment_delimiter("//"):
+		add_comment_delimiter("//", "")
+	
+	parse_script_text()
+	syntax_highlighter = retroscript_highlighter
+	compiler_info_updated.emit()
+
+func when_lines_edited(from_line:int, to_line:int) -> void:
+	parse_script_text(from_line, to_line)
+	syntax_highlighter = retroscript_highlighter
+	compiler_info_updated.emit()

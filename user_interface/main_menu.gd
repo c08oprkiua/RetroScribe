@@ -8,6 +8,8 @@ extends VBoxContainer
 func _ready() -> void:
 	script_open_dialog.connect(&"file_selected", validate_file)
 	Central.connect("switch_tab", change_tab)
+	
+	Central.languages[&"RSDKv3"] = load("res://retroscript/specs/RSDKv3.tres") as Resource
 
 func _on_open_pressed() -> void:
 	script_open_dialog.show()
