@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dxqfyx60tnul4"]
+
+[node name="Settings" type="HSplitContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TableOfContents" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+
+[node name="Vert" type="VBoxContainer" parent="TableOfContents"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Colors" type="Button" parent="TableOfContents/Vert"]
+layout_mode = 2
+text = "Syntax Colors"
+
+[node name="Langs" type="Button" parent="TableOfContents/Vert"]
+layout_mode = 2
+text = "Languages"
+
+[node name="Editor" type="Button" parent="TableOfContents/Vert"]
+layout_mode = 2
+text = "Editor"
+
+[node name="ContentsOfTable" type="ScrollContainer" parent="."]
+layout_mode = 2
+
+[node name="Vert" type="VBoxContainer" parent="ContentsOfTable"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Colors" type="VBoxContainer" parent="ContentsOfTable/Vert"]
+layout_mode = 2
+
+[node name="Langs" type="VBoxContainer" parent="ContentsOfTable/Vert"]
+layout_mode = 2
+
+[node name="Editor" type="VBoxContainer" parent="ContentsOfTable/Vert"]
+layout_mode = 2

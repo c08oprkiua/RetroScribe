@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RetroScriptSpec" load_steps=3 format=3 uid="uid://dtymtowpimnq2"]
+
+[ext_resource type="Script" path="res://retroscript/lang_info.gd" id="1_78e30"]
+[ext_resource type="Script" path="res://retroscript/func_info.gd" id="2_p4coa"]
+
+[resource]
+script = ExtResource("1_78e30")
+alias_max_count = 116
+keywords = PackedStringArray("alias", "platform", "endplatform", "end", "sub", "endsub", "function", "endfunction", "if", "else", "endif", "switch", "case", "break", "endswitch", "for", "while", "loop")
+sub_functions = Dictionary[StringName, ExtResource("2_p4coa")]({})
+aliases = Dictionary[String, String]({})

@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnn3d75cq8lf7"]
+
+[ext_resource type="Script" path="res://user_interface/retroscript_editor.gd" id="1_y6e58"]
+[ext_resource type="FontFile" uid="uid://c00lvnhr40qnj" path="res://user_interface/consolas.ttf" id="2_5pwx1"]
+[ext_resource type="Script" path="res://v3_script_compiler.gd" id="3_1l6p3"]
+
+[node name="RetroScribe" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+script = ExtResource("1_y6e58")
+
+[node name="UISplit" type="HSplitContainer" parent="."]
+layout_mode = 2
+split_offset = 70
+
+[node name="Scroll" type="ScrollContainer" parent="UISplit"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="List" type="VBoxContainer" parent="UISplit/Scroll"]
+layout_mode = 2
+
+[node name="WhichLang" type="OptionButton" parent="UISplit/Scroll/List"]
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "RSDKv3"
+popup/item_0/id = 0
+popup/item_1/text = "RSDKv4"
+popup/item_1/id = 1
+
+[node name="FunctionList" type="VBoxContainer" parent="UISplit/Scroll/List"]
+layout_mode = 2
+
+[node name="CodeEditor" type="VBoxContainer" parent="UISplit"]
+layout_mode = 2
+
+[node name="RetroScript" type="CodeEdit" parent="UISplit/CodeEditor"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_5pwx1")
+wrap_mode = 1
+minimap_draw = true
+gutters_draw_bookmarks = true
+gutters_draw_line_numbers = true
+gutters_zero_pad_line_numbers = true
+script = ExtResource("3_1l6p3")
+enable_text_editor = true
+
+[node name="SearchBox" type="HBoxContainer" parent="UISplit/CodeEditor"]
+layout_mode = 2
