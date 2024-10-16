@@ -4,22 +4,6 @@
 [ext_resource type="Script" path="res://retroscript/var_info.gd" id="1_i3hnj"]
 [ext_resource type="Script" path="res://retroscript/func_info.gd" id="2_p4coa"]
 
-[sub_resource type="Resource" id="Resource_kj4dn"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = -1
-description = "Called once every frame per object if priority allows for it."
-
-[sub_resource type="Resource" id="Resource_ntm3l"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = -1
-description = "Called once every frame per object if Player.ObjectInteraction is enabled, and priority allows for it."
-
 [sub_resource type="Resource" id="Resource_du0ih"]
 script = ExtResource("2_p4coa")
 opcode_size = 0
@@ -27,30 +11,6 @@ start_line = -1
 end_line = -1
 opcode = -1
 description = "Called once every frame per object if priority allows for it. The ordering is based the value of Object.DrawOrder."
-
-[sub_resource type="Resource" id="Resource_j1pwl"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = -1
-description = "Called once per object type when the stage loads. Used for loading assets, initializing variables, etc."
-
-[sub_resource type="Resource" id="Resource_ygpr3"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = -1
-description = "Called once per object edit by the editor (RetroED v2), sets up the interface for variable editing"
-
-[sub_resource type="Resource" id="Resource_mk4i2"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = -1
-description = "Similar to ObjectDraw, though only called by the editor (RetroED v2), called once a frame for each object"
 
 [sub_resource type="Resource" id="Resource_7lhds"]
 script = ExtResource("2_p4coa")
@@ -60,20 +20,52 @@ end_line = -1
 opcode = -1
 description = "Similar to ObjectStartup, though only called by the editor (RetroED v2), used to load any spriteframes or variables for the object needed by the editor"
 
-[sub_resource type="Resource" id="Resource_pxbeg"]
+[sub_resource type="Resource" id="Resource_kj4dn"]
 script = ExtResource("2_p4coa")
 opcode_size = 0
 start_line = -1
 end_line = -1
-opcode = 0
-description = ""
+opcode = -1
+description = "Called once every frame per object if priority allows for it."
 
-[sub_resource type="Resource" id="Resource_ngve5"]
+[sub_resource type="Resource" id="Resource_j1pwl"]
 script = ExtResource("2_p4coa")
-opcode_size = 2
+opcode_size = 0
 start_line = -1
 end_line = -1
-opcode = 1
+opcode = -1
+description = "Called once per object type when the stage loads. Used for loading assets, initializing variables, etc."
+
+[sub_resource type="Resource" id="Resource_mk4i2"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = -1
+description = "Similar to ObjectDraw, though only called by the editor (RetroED v2), called once a frame for each object"
+
+[sub_resource type="Resource" id="Resource_ygpr3"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = -1
+description = "Called once per object edit by the editor (RetroED v2), sets up the interface for variable editing"
+
+[sub_resource type="Resource" id="Resource_ntm3l"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = -1
+description = "Called once every frame per object if Player.ObjectInteraction is enabled, and priority allows for it."
+
+[sub_resource type="Resource" id="Resource_4y8qx"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 33
 description = ""
 
 [sub_resource type="Resource" id="Resource_3fwgv"]
@@ -84,12 +76,884 @@ end_line = -1
 opcode = 2
 description = ""
 
+[sub_resource type="Resource" id="Resource_hhilk"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 38
+description = ""
+
+[sub_resource type="Resource" id="Resource_l1iys"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 37
+description = ""
+
+[sub_resource type="Resource" id="Resource_o7t81"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 80
+description = ""
+
+[sub_resource type="Resource" id="Resource_e8quk"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 35
+description = ""
+
+[sub_resource type="Resource" id="Resource_fn5k3"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 25
+description = ""
+
+[sub_resource type="Resource" id="Resource_taa1n"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 59
+description = ""
+
+[sub_resource type="Resource" id="Resource_seb1v"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 125
+description = ""
+
+[sub_resource type="Resource" id="Resource_nmaxb"]
+script = ExtResource("2_p4coa")
+opcode_size = 5
+start_line = -1
+end_line = -1
+opcode = 128
+description = ""
+
+[sub_resource type="Resource" id="Resource_y8orq"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 129
+description = ""
+
+[sub_resource type="Resource" id="Resource_4eor3"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 104
+description = ""
+
+[sub_resource type="Resource" id="Resource_gf513"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 112
+description = ""
+
+[sub_resource type="Resource" id="Resource_wsd2t"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 85
+description = ""
+
+[sub_resource type="Resource" id="Resource_ybcy3"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 108
+description = ""
+
+[sub_resource type="Resource" id="Resource_qgf2o"]
+script = ExtResource("2_p4coa")
+opcode_size = 6
+start_line = -1
+end_line = -1
+opcode = 107
+description = ""
+
+[sub_resource type="Resource" id="Resource_a6the"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 103
+description = ""
+
+[sub_resource type="Resource" id="Resource_xkmbj"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 102
+description = ""
+
+[sub_resource type="Resource" id="Resource_5765x"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 94
+description = ""
+
+[sub_resource type="Resource" id="Resource_y6mvm"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 93
+description = ""
+
+[sub_resource type="Resource" id="Resource_j6hgp"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 64
+description = ""
+
+[sub_resource type="Resource" id="Resource_ncsag"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 89
+description = ""
+
+[sub_resource type="Resource" id="Resource_clupq"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 83
+description = ""
+
+[sub_resource type="Resource" id="Resource_s2bpa"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 84
+description = ""
+
+[sub_resource type="Resource" id="Resource_f406b"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 76
+description = ""
+
+[sub_resource type="Resource" id="Resource_i2d2r"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 75
+description = ""
+
+[sub_resource type="Resource" id="Resource_5e1wq"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 70
+description = ""
+
+[sub_resource type="Resource" id="Resource_4t57j"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 63
+description = ""
+
+[sub_resource type="Resource" id="Resource_auwfp"]
+script = ExtResource("2_p4coa")
+opcode_size = 7
+start_line = -1
+end_line = -1
+opcode = 62
+description = ""
+
+[sub_resource type="Resource" id="Resource_nykpg"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 16
+description = ""
+
+[sub_resource type="Resource" id="Resource_ln53f"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 41
+description = ""
+
+[sub_resource type="Resource" id="Resource_m0cqs"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 134
+description = ""
+
+[sub_resource type="Resource" id="Resource_m3iun"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 133
+description = ""
+
+[sub_resource type="Resource" id="Resource_fpf3h"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 132
+description = ""
+
+[sub_resource type="Resource" id="Resource_tduan"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 131
+description = ""
+
+[sub_resource type="Resource" id="Resource_m1yf1"]
+script = ExtResource("2_p4coa")
+opcode_size = 7
+start_line = -1
+end_line = -1
+opcode = 127
+description = ""
+
+[sub_resource type="Resource" id="Resource_8x3h6"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 126
+description = ""
+
+[sub_resource type="Resource" id="Resource_8e36x"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 124
+description = ""
+
+[sub_resource type="Resource" id="Resource_7hsyv"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 123
+description = ""
+
+[sub_resource type="Resource" id="Resource_g7ffm"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 122
+description = ""
+
+[sub_resource type="Resource" id="Resource_pase1"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 121
+description = ""
+
+[sub_resource type="Resource" id="Resource_cwokp"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 120
+description = ""
+
+[sub_resource type="Resource" id="Resource_w2txb"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 119
+description = ""
+
+[sub_resource type="Resource" id="Resource_6ohyg"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 118
+description = ""
+
+[sub_resource type="Resource" id="Resource_bs2nq"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 117
+description = ""
+
+[sub_resource type="Resource" id="Resource_a3uhl"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 116
+description = ""
+
+[sub_resource type="Resource" id="Resource_1dohu"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 115
+description = ""
+
+[sub_resource type="Resource" id="Resource_woaqx"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 114
+description = ""
+
+[sub_resource type="Resource" id="Resource_0akq2"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 113
+description = ""
+
+[sub_resource type="Resource" id="Resource_tvei8"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 111
+description = ""
+
+[sub_resource type="Resource" id="Resource_qnn0s"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 110
+description = ""
+
+[sub_resource type="Resource" id="Resource_gyeur"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 109
+description = ""
+
+[sub_resource type="Resource" id="Resource_3fqir"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 106
+description = ""
+
+[sub_resource type="Resource" id="Resource_d5ruu"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 105
+description = ""
+
+[sub_resource type="Resource" id="Resource_54vsc"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 101
+description = ""
+
+[sub_resource type="Resource" id="Resource_fs7fm"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 100
+description = ""
+
+[sub_resource type="Resource" id="Resource_kfng1"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 99
+description = ""
+
+[sub_resource type="Resource" id="Resource_tmwfo"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 98
+description = ""
+
+[sub_resource type="Resource" id="Resource_7vtes"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 97
+description = ""
+
+[sub_resource type="Resource" id="Resource_hlo4x"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 96
+description = ""
+
+[sub_resource type="Resource" id="Resource_4e4de"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 95
+description = ""
+
+[sub_resource type="Resource" id="Resource_q6m3f"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 92
+description = ""
+
+[sub_resource type="Resource" id="Resource_kwod2"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 91
+description = ""
+
+[sub_resource type="Resource" id="Resource_chm3n"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 90
+description = ""
+
+[sub_resource type="Resource" id="Resource_lafey"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 88
+description = ""
+
+[sub_resource type="Resource" id="Resource_5pyh1"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 87
+description = ""
+
+[sub_resource type="Resource" id="Resource_mxcsh"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 86
+description = ""
+
+[sub_resource type="Resource" id="Resource_6mdwt"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 82
+description = ""
+
+[sub_resource type="Resource" id="Resource_u5wnx"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 81
+description = ""
+
+[sub_resource type="Resource" id="Resource_w6yyg"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 79
+description = ""
+
+[sub_resource type="Resource" id="Resource_ojf03"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 78
+description = ""
+
+[sub_resource type="Resource" id="Resource_g35ei"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 77
+description = ""
+
+[sub_resource type="Resource" id="Resource_b24r5"]
+script = ExtResource("2_p4coa")
+opcode_size = 5
+start_line = -1
+end_line = -1
+opcode = 74
+description = ""
+
+[sub_resource type="Resource" id="Resource_y8ew2"]
+script = ExtResource("2_p4coa")
+opcode_size = 5
+start_line = -1
+end_line = -1
+opcode = 73
+description = ""
+
+[sub_resource type="Resource" id="Resource_fxf8g"]
+script = ExtResource("2_p4coa")
+opcode_size = 8
+start_line = -1
+end_line = -1
+opcode = 72
+description = ""
+
+[sub_resource type="Resource" id="Resource_pt24t"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 71
+description = ""
+
+[sub_resource type="Resource" id="Resource_5j0ft"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 69
+description = ""
+
+[sub_resource type="Resource" id="Resource_02e0g"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 68
+description = ""
+
+[sub_resource type="Resource" id="Resource_8ogdq"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 67
+description = ""
+
+[sub_resource type="Resource" id="Resource_ts464"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 61
+description = ""
+
+[sub_resource type="Resource" id="Resource_byj4y"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 60
+description = ""
+
+[sub_resource type="Resource" id="Resource_hw3xb"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 51
+description = ""
+
+[sub_resource type="Resource" id="Resource_1m4jo"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 50
+description = ""
+
+[sub_resource type="Resource" id="Resource_yxpli"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 49
+description = ""
+
+[sub_resource type="Resource" id="Resource_usv37"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 48
+description = ""
+
+[sub_resource type="Resource" id="Resource_auqrv"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 47
+description = ""
+
+[sub_resource type="Resource" id="Resource_rvk10"]
+script = ExtResource("2_p4coa")
+opcode_size = 7
+start_line = -1
+end_line = -1
+opcode = 54
+description = ""
+
+[sub_resource type="Resource" id="Resource_0hxh0"]
+script = ExtResource("2_p4coa")
+opcode_size = 7
+start_line = -1
+end_line = -1
+opcode = 53
+description = ""
+
+[sub_resource type="Resource" id="Resource_5v5f5"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 52
+description = ""
+
+[sub_resource type="Resource" id="Resource_tfmvt"]
+script = ExtResource("2_p4coa")
+opcode_size = 7
+start_line = -1
+end_line = -1
+opcode = 57
+description = ""
+
+[sub_resource type="Resource" id="Resource_2yei7"]
+script = ExtResource("2_p4coa")
+opcode_size = 6
+start_line = -1
+end_line = -1
+opcode = 56
+description = ""
+
+[sub_resource type="Resource" id="Resource_adybc"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 55
+description = ""
+
+[sub_resource type="Resource" id="Resource_0drwd"]
+script = ExtResource("2_p4coa")
+opcode_size = 5
+start_line = -1
+end_line = -1
+opcode = 58
+description = ""
+
+[sub_resource type="Resource" id="Resource_lcutk"]
+script = ExtResource("2_p4coa")
+opcode_size = 7
+start_line = -1
+end_line = -1
+opcode = 46
+description = ""
+
+[sub_resource type="Resource" id="Resource_mky83"]
+script = ExtResource("2_p4coa")
+opcode_size = 4
+start_line = -1
+end_line = -1
+opcode = 45
+description = ""
+
+[sub_resource type="Resource" id="Resource_o1cx8"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 44
+description = ""
+
+[sub_resource type="Resource" id="Resource_m1gyk"]
+script = ExtResource("2_p4coa")
+opcode_size = 5
+start_line = -1
+end_line = -1
+opcode = 43
+description = ""
+
+[sub_resource type="Resource" id="Resource_140bs"]
+script = ExtResource("2_p4coa")
+opcode_size = 5
+start_line = -1
+end_line = -1
+opcode = 42
+description = ""
+
+[sub_resource type="Resource" id="Resource_uwpla"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 40
+description = ""
+
+[sub_resource type="Resource" id="Resource_nbayg"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 39
+description = ""
+
+[sub_resource type="Resource" id="Resource_pu55i"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 36
+description = ""
+
+[sub_resource type="Resource" id="Resource_48j8j"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 34
+description = ""
+
+[sub_resource type="Resource" id="Resource_jwfqo"]
+script = ExtResource("2_p4coa")
+opcode_size = 0
+start_line = -1
+end_line = -1
+opcode = 26
+description = ""
+
+[sub_resource type="Resource" id="Resource_3flb0"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 18
+description = ""
+
+[sub_resource type="Resource" id="Resource_fck50"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 32
+description = ""
+
+[sub_resource type="Resource" id="Resource_kusay"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 29
+description = ""
+
+[sub_resource type="Resource" id="Resource_b4f38"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 27
+description = ""
+
+[sub_resource type="Resource" id="Resource_ngve5"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 1
+description = ""
+
+[sub_resource type="Resource" id="Resource_i684d"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 28
+description = ""
+
+[sub_resource type="Resource" id="Resource_g2xta"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 20
+description = ""
+
 [sub_resource type="Resource" id="Resource_5tbpf"]
 script = ExtResource("2_p4coa")
 opcode_size = 2
 start_line = -1
 end_line = -1
 opcode = 3
+description = ""
+
+[sub_resource type="Resource" id="Resource_vx48l"]
+script = ExtResource("2_p4coa")
+opcode_size = 3
+start_line = -1
+end_line = -1
+opcode = 22
 description = ""
 
 [sub_resource type="Resource" id="Resource_1ya5r"]
@@ -124,22 +988,6 @@ end_line = -1
 opcode = 7
 description = ""
 
-[sub_resource type="Resource" id="Resource_8as1d"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 8
-description = ""
-
-[sub_resource type="Resource" id="Resource_obak3"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 9
-description = ""
-
 [sub_resource type="Resource" id="Resource_e56oj"]
 script = ExtResource("2_p4coa")
 opcode_size = 2
@@ -172,46 +1020,6 @@ end_line = -1
 opcode = 13
 description = ""
 
-[sub_resource type="Resource" id="Resource_ajb03"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 14
-description = ""
-
-[sub_resource type="Resource" id="Resource_yssiw"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 15
-description = ""
-
-[sub_resource type="Resource" id="Resource_nykpg"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 16
-description = ""
-
-[sub_resource type="Resource" id="Resource_t1pw0"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 17
-description = ""
-
-[sub_resource type="Resource" id="Resource_3flb0"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 18
-description = ""
-
 [sub_resource type="Resource" id="Resource_w5fvj"]
 script = ExtResource("2_p4coa")
 opcode_size = 3
@@ -220,28 +1028,12 @@ end_line = -1
 opcode = 19
 description = ""
 
-[sub_resource type="Resource" id="Resource_g2xta"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 20
-description = ""
-
 [sub_resource type="Resource" id="Resource_6380y"]
 script = ExtResource("2_p4coa")
 opcode_size = 3
 start_line = -1
 end_line = -1
 opcode = 21
-description = ""
-
-[sub_resource type="Resource" id="Resource_vx48l"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 22
 description = ""
 
 [sub_resource type="Resource" id="Resource_3j18q"]
@@ -260,52 +1052,20 @@ end_line = -1
 opcode = 24
 description = ""
 
-[sub_resource type="Resource" id="Resource_fn5k3"]
+[sub_resource type="Resource" id="Resource_8as1d"]
 script = ExtResource("2_p4coa")
-opcode_size = 0
+opcode_size = 2
 start_line = -1
 end_line = -1
-opcode = 25
+opcode = 8
 description = ""
 
-[sub_resource type="Resource" id="Resource_jwfqo"]
+[sub_resource type="Resource" id="Resource_obak3"]
 script = ExtResource("2_p4coa")
-opcode_size = 0
+opcode_size = 2
 start_line = -1
 end_line = -1
-opcode = 26
-description = ""
-
-[sub_resource type="Resource" id="Resource_b4f38"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 27
-description = ""
-
-[sub_resource type="Resource" id="Resource_i684d"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 28
-description = ""
-
-[sub_resource type="Resource" id="Resource_kusay"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 29
-description = ""
-
-[sub_resource type="Resource" id="Resource_31g5j"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 30
+opcode = 9
 description = ""
 
 [sub_resource type="Resource" id="Resource_xi2xk"]
@@ -316,268 +1076,44 @@ end_line = -1
 opcode = 31
 description = ""
 
-[sub_resource type="Resource" id="Resource_fck50"]
+[sub_resource type="Resource" id="Resource_31g5j"]
 script = ExtResource("2_p4coa")
 opcode_size = 3
 start_line = -1
 end_line = -1
-opcode = 32
+opcode = 30
 description = ""
 
-[sub_resource type="Resource" id="Resource_4y8qx"]
+[sub_resource type="Resource" id="Resource_yssiw"]
+script = ExtResource("2_p4coa")
+opcode_size = 2
+start_line = -1
+end_line = -1
+opcode = 15
+description = ""
+
+[sub_resource type="Resource" id="Resource_ajb03"]
+script = ExtResource("2_p4coa")
+opcode_size = 1
+start_line = -1
+end_line = -1
+opcode = 14
+description = ""
+
+[sub_resource type="Resource" id="Resource_pxbeg"]
 script = ExtResource("2_p4coa")
 opcode_size = 0
 start_line = -1
 end_line = -1
-opcode = 33
+opcode = 0
 description = ""
 
-[sub_resource type="Resource" id="Resource_48j8j"]
+[sub_resource type="Resource" id="Resource_t1pw0"]
 script = ExtResource("2_p4coa")
 opcode_size = 2
 start_line = -1
 end_line = -1
-opcode = 34
-description = ""
-
-[sub_resource type="Resource" id="Resource_e8quk"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 35
-description = ""
-
-[sub_resource type="Resource" id="Resource_pu55i"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 36
-description = ""
-
-[sub_resource type="Resource" id="Resource_l1iys"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 37
-description = ""
-
-[sub_resource type="Resource" id="Resource_hhilk"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 38
-description = ""
-
-[sub_resource type="Resource" id="Resource_nbayg"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 39
-description = ""
-
-[sub_resource type="Resource" id="Resource_uwpla"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 40
-description = ""
-
-[sub_resource type="Resource" id="Resource_ln53f"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 41
-description = ""
-
-[sub_resource type="Resource" id="Resource_140bs"]
-script = ExtResource("2_p4coa")
-opcode_size = 5
-start_line = -1
-end_line = -1
-opcode = 42
-description = ""
-
-[sub_resource type="Resource" id="Resource_m1gyk"]
-script = ExtResource("2_p4coa")
-opcode_size = 5
-start_line = -1
-end_line = -1
-opcode = 43
-description = ""
-
-[sub_resource type="Resource" id="Resource_o1cx8"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 44
-description = ""
-
-[sub_resource type="Resource" id="Resource_mky83"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 45
-description = ""
-
-[sub_resource type="Resource" id="Resource_lcutk"]
-script = ExtResource("2_p4coa")
-opcode_size = 7
-start_line = -1
-end_line = -1
-opcode = 46
-description = ""
-
-[sub_resource type="Resource" id="Resource_auqrv"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 47
-description = ""
-
-[sub_resource type="Resource" id="Resource_usv37"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 48
-description = ""
-
-[sub_resource type="Resource" id="Resource_yxpli"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 49
-description = ""
-
-[sub_resource type="Resource" id="Resource_1m4jo"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 50
-description = ""
-
-[sub_resource type="Resource" id="Resource_hw3xb"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 51
-description = ""
-
-[sub_resource type="Resource" id="Resource_5v5f5"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 52
-description = ""
-
-[sub_resource type="Resource" id="Resource_0hxh0"]
-script = ExtResource("2_p4coa")
-opcode_size = 7
-start_line = -1
-end_line = -1
-opcode = 53
-description = ""
-
-[sub_resource type="Resource" id="Resource_rvk10"]
-script = ExtResource("2_p4coa")
-opcode_size = 7
-start_line = -1
-end_line = -1
-opcode = 54
-description = ""
-
-[sub_resource type="Resource" id="Resource_adybc"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 55
-description = ""
-
-[sub_resource type="Resource" id="Resource_2yei7"]
-script = ExtResource("2_p4coa")
-opcode_size = 6
-start_line = -1
-end_line = -1
-opcode = 56
-description = ""
-
-[sub_resource type="Resource" id="Resource_tfmvt"]
-script = ExtResource("2_p4coa")
-opcode_size = 7
-start_line = -1
-end_line = -1
-opcode = 57
-description = ""
-
-[sub_resource type="Resource" id="Resource_0drwd"]
-script = ExtResource("2_p4coa")
-opcode_size = 5
-start_line = -1
-end_line = -1
-opcode = 58
-description = ""
-
-[sub_resource type="Resource" id="Resource_taa1n"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 59
-description = ""
-
-[sub_resource type="Resource" id="Resource_byj4y"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 60
-description = ""
-
-[sub_resource type="Resource" id="Resource_ts464"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 61
-description = ""
-
-[sub_resource type="Resource" id="Resource_auwfp"]
-script = ExtResource("2_p4coa")
-opcode_size = 7
-start_line = -1
-end_line = -1
-opcode = 62
-description = ""
-
-[sub_resource type="Resource" id="Resource_4t57j"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 63
-description = ""
-
-[sub_resource type="Resource" id="Resource_j6hgp"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 64
+opcode = 17
 description = ""
 
 [sub_resource type="Resource" id="Resource_reofr"]
@@ -596,548 +1132,12 @@ end_line = -1
 opcode = 66
 description = ""
 
-[sub_resource type="Resource" id="Resource_8ogdq"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 67
-description = ""
-
-[sub_resource type="Resource" id="Resource_02e0g"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 68
-description = ""
-
-[sub_resource type="Resource" id="Resource_5j0ft"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 69
-description = ""
-
-[sub_resource type="Resource" id="Resource_5e1wq"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 70
-description = ""
-
-[sub_resource type="Resource" id="Resource_pt24t"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 71
-description = ""
-
-[sub_resource type="Resource" id="Resource_fxf8g"]
-script = ExtResource("2_p4coa")
-opcode_size = 8
-start_line = -1
-end_line = -1
-opcode = 72
-description = ""
-
-[sub_resource type="Resource" id="Resource_y8ew2"]
-script = ExtResource("2_p4coa")
-opcode_size = 5
-start_line = -1
-end_line = -1
-opcode = 73
-description = ""
-
-[sub_resource type="Resource" id="Resource_b24r5"]
-script = ExtResource("2_p4coa")
-opcode_size = 5
-start_line = -1
-end_line = -1
-opcode = 74
-description = ""
-
-[sub_resource type="Resource" id="Resource_i2d2r"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 75
-description = ""
-
-[sub_resource type="Resource" id="Resource_f406b"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 76
-description = ""
-
-[sub_resource type="Resource" id="Resource_g35ei"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 77
-description = ""
-
-[sub_resource type="Resource" id="Resource_ojf03"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 78
-description = ""
-
-[sub_resource type="Resource" id="Resource_w6yyg"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 79
-description = ""
-
-[sub_resource type="Resource" id="Resource_o7t81"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 80
-description = ""
-
-[sub_resource type="Resource" id="Resource_u5wnx"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 81
-description = ""
-
-[sub_resource type="Resource" id="Resource_6mdwt"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 82
-description = ""
-
-[sub_resource type="Resource" id="Resource_clupq"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 83
-description = ""
-
-[sub_resource type="Resource" id="Resource_s2bpa"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 84
-description = ""
-
-[sub_resource type="Resource" id="Resource_wsd2t"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 85
-description = ""
-
-[sub_resource type="Resource" id="Resource_mxcsh"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 86
-description = ""
-
-[sub_resource type="Resource" id="Resource_5pyh1"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 87
-description = ""
-
-[sub_resource type="Resource" id="Resource_lafey"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 88
-description = ""
-
-[sub_resource type="Resource" id="Resource_ncsag"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 89
-description = ""
-
-[sub_resource type="Resource" id="Resource_chm3n"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 90
-description = ""
-
-[sub_resource type="Resource" id="Resource_kwod2"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 91
-description = ""
-
-[sub_resource type="Resource" id="Resource_q6m3f"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 92
-description = ""
-
-[sub_resource type="Resource" id="Resource_y6mvm"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 93
-description = ""
-
-[sub_resource type="Resource" id="Resource_5765x"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 94
-description = ""
-
-[sub_resource type="Resource" id="Resource_4e4de"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 95
-description = ""
-
-[sub_resource type="Resource" id="Resource_hlo4x"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 96
-description = ""
-
-[sub_resource type="Resource" id="Resource_7vtes"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 97
-description = ""
-
-[sub_resource type="Resource" id="Resource_tmwfo"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 98
-description = ""
-
-[sub_resource type="Resource" id="Resource_kfng1"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 99
-description = ""
-
-[sub_resource type="Resource" id="Resource_fs7fm"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 100
-description = ""
-
-[sub_resource type="Resource" id="Resource_54vsc"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 101
-description = ""
-
-[sub_resource type="Resource" id="Resource_xkmbj"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 102
-description = ""
-
-[sub_resource type="Resource" id="Resource_a6the"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 103
-description = ""
-
-[sub_resource type="Resource" id="Resource_4eor3"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 104
-description = ""
-
-[sub_resource type="Resource" id="Resource_d5ruu"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 105
-description = ""
-
-[sub_resource type="Resource" id="Resource_3fqir"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 106
-description = ""
-
-[sub_resource type="Resource" id="Resource_qgf2o"]
-script = ExtResource("2_p4coa")
-opcode_size = 6
-start_line = -1
-end_line = -1
-opcode = 107
-description = ""
-
-[sub_resource type="Resource" id="Resource_ybcy3"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 108
-description = ""
-
-[sub_resource type="Resource" id="Resource_gyeur"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 109
-description = ""
-
-[sub_resource type="Resource" id="Resource_qnn0s"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 110
-description = ""
-
-[sub_resource type="Resource" id="Resource_tvei8"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 111
-description = ""
-
-[sub_resource type="Resource" id="Resource_gf513"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 112
-description = ""
-
-[sub_resource type="Resource" id="Resource_0akq2"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 113
-description = ""
-
-[sub_resource type="Resource" id="Resource_woaqx"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 114
-description = ""
-
-[sub_resource type="Resource" id="Resource_1dohu"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 115
-description = ""
-
-[sub_resource type="Resource" id="Resource_a3uhl"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 116
-description = ""
-
-[sub_resource type="Resource" id="Resource_bs2nq"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 117
-description = ""
-
-[sub_resource type="Resource" id="Resource_6ohyg"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 118
-description = ""
-
-[sub_resource type="Resource" id="Resource_w2txb"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 119
-description = ""
-
-[sub_resource type="Resource" id="Resource_cwokp"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 120
-description = ""
-
-[sub_resource type="Resource" id="Resource_pase1"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 121
-description = ""
-
-[sub_resource type="Resource" id="Resource_g7ffm"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 122
-description = ""
-
-[sub_resource type="Resource" id="Resource_7hsyv"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 123
-description = ""
-
-[sub_resource type="Resource" id="Resource_8e36x"]
-script = ExtResource("2_p4coa")
-opcode_size = 0
-start_line = -1
-end_line = -1
-opcode = 124
-description = ""
-
-[sub_resource type="Resource" id="Resource_seb1v"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 125
-description = ""
-
-[sub_resource type="Resource" id="Resource_8x3h6"]
-script = ExtResource("2_p4coa")
-opcode_size = 3
-start_line = -1
-end_line = -1
-opcode = 126
-description = ""
-
-[sub_resource type="Resource" id="Resource_m1yf1"]
-script = ExtResource("2_p4coa")
-opcode_size = 7
-start_line = -1
-end_line = -1
-opcode = 127
-description = ""
-
-[sub_resource type="Resource" id="Resource_nmaxb"]
-script = ExtResource("2_p4coa")
-opcode_size = 5
-start_line = -1
-end_line = -1
-opcode = 128
-description = ""
-
-[sub_resource type="Resource" id="Resource_y8orq"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 129
-description = ""
-
 [sub_resource type="Resource" id="Resource_42q3v"]
 script = ExtResource("2_p4coa")
 opcode_size = 2
 start_line = -1
 end_line = -1
 opcode = 130
-description = ""
-
-[sub_resource type="Resource" id="Resource_tduan"]
-script = ExtResource("2_p4coa")
-opcode_size = 2
-start_line = -1
-end_line = -1
-opcode = 131
-description = ""
-
-[sub_resource type="Resource" id="Resource_fpf3h"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 132
-description = ""
-
-[sub_resource type="Resource" id="Resource_m3iun"]
-script = ExtResource("2_p4coa")
-opcode_size = 1
-start_line = -1
-end_line = -1
-opcode = 133
-description = ""
-
-[sub_resource type="Resource" id="Resource_m0cqs"]
-script = ExtResource("2_p4coa")
-opcode_size = 4
-start_line = -1
-end_line = -1
-opcode = 134
 description = ""
 
 [resource]
@@ -1148,127 +1148,123 @@ event_declaration = "sub"
 events = Dictionary[StringName, ExtResource("2_p4coa")]({
 &"ObjectDraw": SubResource("Resource_du0ih"),
 &"RSDKLoad": SubResource("Resource_7lhds"),
-&"ObjectMain": SubResource("Resource_kj4dn"),
-&"ObjectStartup": SubResource("Resource_j1pwl"),
-&"RSDKDraw": SubResource("Resource_mk4i2"),
+&"ObjectPlayerInteraction": SubResource("Resource_ntm3l"),
 &"RSDKEdit": SubResource("Resource_ygpr3"),
-&"ObjectPlayerInteraction": SubResource("Resource_ntm3l")
+&"RSDKDraw": SubResource("Resource_mk4i2"),
+&"ObjectStartup": SubResource("Resource_j1pwl"),
+&"ObjectMain": SubResource("Resource_kj4dn")
 })
 functions = Dictionary[StringName, ExtResource("2_p4coa")]({
 &"loop": SubResource("Resource_4y8qx"),
-&"Add": SubResource("Resource_3fwgv"),
-&"Sin": SubResource("Resource_hhilk"),
-&"Rand": SubResource("Resource_l1iys"),
-&"DrawObjectAnimation": SubResource("Resource_o7t81"),
+&"CallFunction": SubResource("Resource_d5ruu"),
+&"ReadSaveRAM": SubResource("Resource_7hsyv"),
+&"MatrixRotateXYZ": SubResource("Resource_a6the"),
+&"ClearDrawList": SubResource("Resource_1dohu"),
+&"SetLeaderboard": SubResource("Resource_tduan"),
+&"PlayMusic": SubResource("Resource_clupq"),
+&"SetDrawListEntityRef": SubResource("Resource_6ohyg"),
+&"ProcessAnimation": SubResource("Resource_w6yyg"),
+&"RotatePalette": SubResource("Resource_taa1n"),
+&"DrawMenu": SubResource("Resource_adybc"),
+&"DrawActName": SubResource("Resource_rvk10"),
+&"CosChange": SubResource("Resource_m1gyk"),
 &"break": SubResource("Resource_e8quk"),
 &"else": SubResource("Resource_fn5k3"),
-&"RotatePalette": SubResource("Resource_taa1n"),
-&"LoadTextFont": SubResource("Resource_seb1v"),
-&"GetTextInfo": SubResource("Resource_nmaxb"),
-&"GetVersionNumber": SubResource("Resource_y8orq"),
-&"TransformVertices": SubResource("Resource_4eor3"),
-&"SetBit": SubResource("Resource_gf513"),
-&"PlaySfx": SubResource("Resource_wsd2t"),
-&"CheckTouchRect": SubResource("Resource_ybcy3"),
-&"SetLayerDeformation": SubResource("Resource_qgf2o"),
-&"MatrixRotateXYZ": SubResource("Resource_a6the"),
-&"MatrixRotateZ": SubResource("Resource_xkmbj"),
-&"Not": SubResource("Resource_5765x"),
-&"StopStageSfx": SubResource("Resource_y6mvm"),
-&"ClearScreen": SubResource("Resource_j6hgp"),
-&"ObjectTileGrip": SubResource("Resource_ncsag"),
-&"PlayMusic": SubResource("Resource_clupq"),
-&"StopMusic": SubResource("Resource_s2bpa"),
-&"BindPlayerToObject": SubResource("Resource_f406b"),
-&"CreateTempObject": SubResource("Resource_i2d2r"),
-&"EditMenuEntry": SubResource("Resource_5e1wq"),
-&"CopyPalette": SubResource("Resource_4t57j"),
-&"SetPaletteFade": SubResource("Resource_auwfp"),
-&"CheckGreater": SubResource("Resource_nykpg"),
-&"Cos256": SubResource("Resource_ln53f"),
-&"HapticEffect": SubResource("Resource_m0cqs"),
-&"EngineCallback": SubResource("Resource_m3iun"),
-&"LoadOnlineMenu": SubResource("Resource_fpf3h"),
-&"SetLeaderboard": SubResource("Resource_tduan"),
-&"DrawText": SubResource("Resource_m1yf1"),
-&"LoadTextFile": SubResource("Resource_8x3h6"),
-&"WriteSaveRAM": SubResource("Resource_8e36x"),
-&"ReadSaveRAM": SubResource("Resource_7hsyv"),
-&"GetAnimationByName": SubResource("Resource_g7ffm"),
-&"Set16x16TileInfo": SubResource("Resource_pase1"),
-&"Copy16x16Tile": SubResource("Resource_cwokp"),
+&"SetActivePalette": SubResource("Resource_ts464"),
 &"Get16x16TileInfo": SubResource("Resource_w2txb"),
-&"SetDrawListEntityRef": SubResource("Resource_6ohyg"),
-&"GetDrawListEntityRef": SubResource("Resource_bs2nq"),
-&"AddDrawListEntityRef": SubResource("Resource_a3uhl"),
-&"ClearDrawList": SubResource("Resource_1dohu"),
-&"ResumeMusic": SubResource("Resource_woaqx"),
-&"PauseMusic": SubResource("Resource_0akq2"),
-&"GetBit": SubResource("Resource_tvei8"),
-&"SetTileLayerEntry": SubResource("Resource_qnn0s"),
 &"GetTileLayerEntry": SubResource("Resource_gyeur"),
-&"EndFunction": SubResource("Resource_3fqir"),
-&"CallFunction": SubResource("Resource_d5ruu"),
-&"MatrixRotateY": SubResource("Resource_54vsc"),
-&"MatrixRotateX": SubResource("Resource_fs7fm"),
-&"MatrixScaleXYZ": SubResource("Resource_kfng1"),
-&"MatrixTranslateXYZ": SubResource("Resource_tmwfo"),
-&"MatrixMultiply": SubResource("Resource_7vtes"),
-&"SetIdentityMatrix": SubResource("Resource_hlo4x"),
-&"Draw3DScene": SubResource("Resource_4e4de"),
-&"PlayStageSfx": SubResource("Resource_q6m3f"),
-&"NextVideoFrame": SubResource("Resource_kwod2"),
-&"LoadVideo": SubResource("Resource_chm3n"),
-&"ObjectTileCollision": SubResource("Resource_lafey"),
-&"SetSfxAttributes": SubResource("Resource_5pyh1"),
-&"StopSfx": SubResource("Resource_mxcsh"),
-&"SetMusicTrack": SubResource("Resource_6mdwt"),
+&"GetAnimationByName": SubResource("Resource_g7ffm"),
+&"StopMusic": SubResource("Resource_s2bpa"),
+&"CheckTouchRect": SubResource("Resource_ybcy3"),
 &"DrawPlayerAnimation": SubResource("Resource_u5wnx"),
-&"ProcessAnimation": SubResource("Resource_w6yyg"),
-&"ProcessPlayerControl": SubResource("Resource_ojf03"),
+&"DrawObjectAnimation": SubResource("Resource_o7t81"),
+&"LoadTextFont": SubResource("Resource_seb1v"),
+&"StopStageSfx": SubResource("Resource_y6mvm"),
+&"SetLayerDeformation": SubResource("Resource_qgf2o"),
+&"EngineCallback": SubResource("Resource_m3iun"),
+&"Copy16x16Tile": SubResource("Resource_cwokp"),
+&"SetAchievement": SubResource("Resource_42q3v"),
+&"Set16x16TileInfo": SubResource("Resource_pase1"),
+&"LoadTextFile": SubResource("Resource_8x3h6"),
+&"BindPlayerToObject": SubResource("Resource_f406b"),
+&"IfLower": SubResource("Resource_vx48l"),
+&"LoadPalette": SubResource("Resource_0drwd"),
+&"EditMenuEntry": SubResource("Resource_5e1wq"),
+&"WGreaterOrEqual": SubResource("Resource_kusay"),
+&"CreateTempObject": SubResource("Resource_i2d2r"),
+&"LoadAnimation": SubResource("Resource_8ogdq"),
+&"DrawSpriteFX": SubResource("Resource_reofr"),
 &"PlayerTileCollision": SubResource("Resource_g35ei"),
-&"PlayerObjectCollision": SubResource("Resource_b24r5"),
-&"ResetObjectEntity": SubResource("Resource_y8ew2"),
+&"SetScreenFade": SubResource("Resource_byj4y"),
+&"DrawTintRect": SubResource("Resource_5v5f5"),
+&"DrawSpriteXY": SubResource("Resource_1m4jo"),
+&"DrawSpriteScreenXY": SubResource("Resource_hw3xb"),
 &"DrawRect": SubResource("Resource_fxf8g"),
-&"LoadStage": SubResource("Resource_pt24t"),
+&"ProcessPlayerControl": SubResource("Resource_ojf03"),
+&"DrawSprite": SubResource("Resource_yxpli"),
+&"ResetObjectEntity": SubResource("Resource_y8ew2"),
+&"PlayStageSfx": SubResource("Resource_q6m3f"),
+&"TransformVertices": SubResource("Resource_4eor3"),
+&"WriteSaveRAM": SubResource("Resource_8e36x"),
+&"NextVideoFrame": SubResource("Resource_kwod2"),
+&"MatrixScaleXYZ": SubResource("Resource_kfng1"),
+&"SetSfxAttributes": SubResource("Resource_5pyh1"),
+&"SetIdentityMatrix": SubResource("Resource_hlo4x"),
+&"ObjectTileGrip": SubResource("Resource_ncsag"),
+&"LoadVideo": SubResource("Resource_chm3n"),
+&"SetTileLayerEntry": SubResource("Resource_qnn0s"),
+&"GetVersionNumber": SubResource("Resource_y8orq"),
+&"AddDrawListEntityRef": SubResource("Resource_a3uhl"),
+&"MatrixRotateX": SubResource("Resource_fs7fm"),
+&"HapticEffect": SubResource("Resource_m0cqs"),
+&"SetMusicTrack": SubResource("Resource_6mdwt"),
+&"MatrixMultiply": SubResource("Resource_7vtes"),
+&"PauseMusic": SubResource("Resource_0akq2"),
+&"MatrixTranslateXYZ": SubResource("Resource_tmwfo"),
+&"MatrixRotateY": SubResource("Resource_54vsc"),
+&"GetTextInfo": SubResource("Resource_nmaxb"),
+&"ResumeMusic": SubResource("Resource_woaqx"),
+&"MatrixRotateZ": SubResource("Resource_xkmbj"),
+&"LoadOnlineMenu": SubResource("Resource_fpf3h"),
+&"DrawText": SubResource("Resource_m1yf1"),
+&"GetDrawListEntityRef": SubResource("Resource_bs2nq"),
+&"CopyPalette": SubResource("Resource_4t57j"),
+&"WNotEqual": SubResource("Resource_fck50"),
+&"PlayerObjectCollision": SubResource("Resource_b24r5"),
 &"AddMenuEntry": SubResource("Resource_5j0ft"),
 &"SetupMenu": SubResource("Resource_02e0g"),
-&"LoadAnimation": SubResource("Resource_8ogdq"),
-&"SetActivePalette": SubResource("Resource_ts464"),
-&"SetScreenFade": SubResource("Resource_byj4y"),
-&"DrawSpriteScreenXY": SubResource("Resource_hw3xb"),
-&"DrawSpriteXY": SubResource("Resource_1m4jo"),
-&"DrawSprite": SubResource("Resource_yxpli"),
-&"RemoveSpriteSheet": SubResource("Resource_usv37"),
-&"LoadSpriteSheet": SubResource("Resource_auqrv"),
-&"DrawActName": SubResource("Resource_rvk10"),
-&"DrawNumbers": SubResource("Resource_0hxh0"),
-&"DrawTintRect": SubResource("Resource_5v5f5"),
-&"EditFrame": SubResource("Resource_tfmvt"),
-&"SpriteFrame": SubResource("Resource_2yei7"),
-&"DrawMenu": SubResource("Resource_adybc"),
-&"LoadPalette": SubResource("Resource_0drwd"),
-&"InterpolateXY": SubResource("Resource_lcutk"),
-&"Interpolate": SubResource("Resource_mky83"),
-&"ATan2": SubResource("Resource_o1cx8"),
-&"CosChange": SubResource("Resource_m1gyk"),
+&"ObjectTileCollision": SubResource("Resource_lafey"),
+&"SetPaletteFade": SubResource("Resource_auwfp"),
+&"DrawSpriteScreenFX": SubResource("Resource_fxar5"),
+&"LoadStage": SubResource("Resource_pt24t"),
 &"SinChange": SubResource("Resource_140bs"),
-&"Sin256": SubResource("Resource_uwpla"),
-&"Cos": SubResource("Resource_nbayg"),
-&"endswitch": SubResource("Resource_pu55i"),
-&"switch": SubResource("Resource_48j8j"),
-&"endif": SubResource("Resource_jwfqo"),
-&"CheckNotEqual": SubResource("Resource_3flb0"),
-&"WNotEqual": SubResource("Resource_fck50"),
-&"WGreaterOrEqual": SubResource("Resource_kusay"),
-&"WEqual": SubResource("Resource_b4f38"),
-&"Equal": SubResource("Resource_ngve5"),
-&"WGreater": SubResource("Resource_i684d"),
+&"EditFrame": SubResource("Resource_tfmvt"),
+&"DrawNumbers": SubResource("Resource_0hxh0"),
+&"SpriteFrame": SubResource("Resource_2yei7"),
+&"Interpolate": SubResource("Resource_mky83"),
+&"RemoveSpriteSheet": SubResource("Resource_usv37"),
+&"ClearScreen": SubResource("Resource_j6hgp"),
+&"EndFunction": SubResource("Resource_3fqir"),
+&"LoadSpriteSheet": SubResource("Resource_auqrv"),
+&"InterpolateXY": SubResource("Resource_lcutk"),
+&"End": SubResource("Resource_pxbeg"),
+&"CheckLower": SubResource("Resource_t1pw0"),
+&"IfGreaterOrEqual": SubResource("Resource_6380y"),
+&"IfLowerOrEqual": SubResource("Resource_3j18q"),
+&"IfNotEqual": SubResource("Resource_p2w28"),
+&"ShR": SubResource("Resource_8as1d"),
+&"ShL": SubResource("Resource_obak3"),
 &"IfGreater": SubResource("Resource_g2xta"),
 &"Sub": SubResource("Resource_5tbpf"),
-&"IfLower": SubResource("Resource_vx48l"),
 &"Inc": SubResource("Resource_1ya5r"),
 &"Dec": SubResource("Resource_lkfqq"),
+&"CheckEqual": SubResource("Resource_yssiw"),
+&"FlipSign": SubResource("Resource_ajb03"),
+&"WEqual": SubResource("Resource_b4f38"),
+&"WLowerOrEqual": SubResource("Resource_xi2xk"),
+&"WLower": SubResource("Resource_31g5j"),
+&"CheckNotEqual": SubResource("Resource_3flb0"),
+&"Sin256": SubResource("Resource_uwpla"),
 &"Mul": SubResource("Resource_wbup5"),
 &"Div": SubResource("Resource_76jed"),
 &"And": SubResource("Resource_e56oj"),
@@ -1276,20 +1272,24 @@ functions = Dictionary[StringName, ExtResource("2_p4coa")]({
 &"Xor": SubResource("Resource_smd0v"),
 &"Mod": SubResource("Resource_kbj2a"),
 &"IfEqual": SubResource("Resource_w5fvj"),
-&"IfGreaterOrEqual": SubResource("Resource_6380y"),
-&"IfLowerOrEqual": SubResource("Resource_3j18q"),
-&"IfNotEqual": SubResource("Resource_p2w28"),
-&"ShR": SubResource("Resource_8as1d"),
-&"ShL": SubResource("Resource_obak3"),
-&"WLowerOrEqual": SubResource("Resource_xi2xk"),
-&"WLower": SubResource("Resource_31g5j"),
-&"CheckEqual": SubResource("Resource_yssiw"),
-&"FlipSign": SubResource("Resource_ajb03"),
-&"End": SubResource("Resource_pxbeg"),
-&"CheckLower": SubResource("Resource_t1pw0"),
-&"DrawSpriteFX": SubResource("Resource_reofr"),
-&"DrawSpriteScreenFX": SubResource("Resource_fxar5"),
-&"SetAchievement": SubResource("Resource_42q3v")
+&"WGreater": SubResource("Resource_i684d"),
+&"Equal": SubResource("Resource_ngve5"),
+&"GetBit": SubResource("Resource_tvei8"),
+&"SetBit": SubResource("Resource_gf513"),
+&"ATan2": SubResource("Resource_o1cx8"),
+&"PlaySfx": SubResource("Resource_wsd2t"),
+&"endif": SubResource("Resource_jwfqo"),
+&"Sin": SubResource("Resource_hhilk"),
+&"Rand": SubResource("Resource_l1iys"),
+&"switch": SubResource("Resource_48j8j"),
+&"StopSfx": SubResource("Resource_mxcsh"),
+&"Not": SubResource("Resource_5765x"),
+&"Draw3DScene": SubResource("Resource_4e4de"),
+&"Cos": SubResource("Resource_nbayg"),
+&"endswitch": SubResource("Resource_pu55i"),
+&"Cos256": SubResource("Resource_ln53f"),
+&"CheckGreater": SubResource("Resource_nykpg"),
+&"Add": SubResource("Resource_3fwgv")
 })
 aliases = Dictionary[String, String]({
 "BONUS_STAGE": "2",

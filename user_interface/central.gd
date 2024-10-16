@@ -13,6 +13,14 @@ enum {
 	Settings
 }
 
+#Godot BUG: Actually loading the resources from disk gives an incorrect error about
+#CodeHighlighter being uncastable to Resource (basically), even though it inherits it.
+var languages:Dictionary[StringName, RetroScriptSpec] = {
+	&"RSDKv3": RetroScriptSpec.new(),
+	&"RSDKv4": RetroScriptSpec.new(),
+	&"Foreverv4": RetroScriptSpec.new(),
+}
+
 signal switch_tab(to:int)
 
 func load_settings_from_ini() -> void:

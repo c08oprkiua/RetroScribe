@@ -32,11 +32,6 @@ layout_mode = 2
 [node name="WhichLang" type="OptionButton" parent="UISplit/Scroll/List"]
 layout_mode = 2
 selected = 0
-item_count = 2
-popup/item_0/text = "RSDKv3"
-popup/item_0/id = 0
-popup/item_1/text = "RSDKv4"
-popup/item_1/id = 1
 
 [node name="FunctionList" type="VBoxContainer" parent="UISplit/Scroll/List"]
 layout_mode = 2

@@ -2,18 +2,32 @@ extends Control
 
 class_name RetroScriptEditor
 
-@onready var code_space:RSDKv3ScriptCompiler = $UISplit/CodeEditor/RetroScript
+@onready var code_space:RetroScriptCompilerBase = $UISplit/CodeEditor/RetroScript
 @onready var function_list:VBoxContainer = $UISplit/Scroll/List/FunctionList
+@onready var language_selector:OptionButton = $"UISplit/Scroll/List/WhichLang"
 
 var script_path:String
+
+var this_editor_lang:int
+
+static var lang_index:Dictionary[int, StringName]
+
+static func _static_init() -> void:
+	var index:int = 0
+	for langs:StringName in Central.languages.keys():
+		lang_index[index] = langs
+		index += 1
 
 func _ready() -> void:
 	code_space.connect("compiler_info_updated", refresh_jump_button_list)
 	if not script_path.is_empty():
 		open_script()
+	for langs:String in Central.languages.keys():
+		language_selector.add_item(langs)
 
 func _on_which_lang_item_selected(index: int) -> void:
-	pass # Replace with function body.
+	this_editor_lang = index
+	code_space.syntax_highlighter = Central.languages.get(lang_index.get(index))
 
 func open_script(path:String = script_path) -> void:
 	if FileAccess.file_exists(path):
