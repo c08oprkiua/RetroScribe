@@ -6,6 +6,9 @@ class_name RetroScriptEditor
 @onready var function_list:VBoxContainer = $UISplit/Scroll/List/FunctionList
 @onready var language_selector:OptionButton = $"UISplit/Scroll/List/WhichLang"
 
+@onready var docs_info:Label = $"UISplit/CodeEditor/Info/Description"
+@onready var docs_value:Label = $"UISplit/CodeEditor/Info/Value"
+
 var script_path:String
 
 func _ready() -> void:
@@ -13,7 +16,8 @@ func _ready() -> void:
 	for langs:String in Central.languages.keys():
 		language_selector.add_item(langs)
 	if not script_path.is_empty():
-		open_script()
+		code_space.text = FileAccess.get_file_as_string(script_path)
+		_on_which_lang_item_selected(language_selector.selected)
 
 func _on_which_lang_item_selected(index:int) -> void:
 	var lang_key:StringName = language_selector.get_item_text(index)
@@ -28,31 +32,29 @@ func open_script(path:String = script_path) -> void:
 	if FileAccess.file_exists(path):
 		name = path.get_file()
 		code_space.text = FileAccess.get_file_as_string(path)
-		code_space.parse_script_text()
+		code_space.setup_retroscript_editor()
 
 func refresh_jump_button_list() -> void:
-	#TODO: Add parsing here so we aren't constantly deleting and re-adding nodes
+	var function_array:Dictionary[StringName, FunctionInfo] = code_space.local_functions.duplicate(true)
+	
+	#parse over the buttons, removing ones no longer valid and ignoring ones that still are
 	for each_button:Node in function_list.get_children():
-		each_button.queue_free()
+		#No need to recreate buttons we already have
+		var button_stringname:StringName = StringName(each_button.name)
+		if code_space.local_functions.has(button_stringname):
+			function_array.erase(button_stringname)
+		else:
+			each_button.queue_free()
 	
-	#BUG: This would cause the functions to be loaded in an order that does not match
-	#their order of definition in the script file
-	#for functions:RSDKv3ScriptCompiler.FunctionInfo in code_space.local_functions:
-		#printt(functions.name, functions.line)
-		#var add_button:Button = make_shortcut_button(functions.name, functions.line)
-		#function_list.add_child(add_button)
-	
+	#This 
 	for bookmarks:int in code_space.get_bookmarked_lines():
-		var trimmed_text:String = code_space.get_line(bookmarks).replacen(" ", "")
-		
-		var button_name:String
-		if trimmed_text.begins_with("sub"):
-			button_name = trimmed_text.trim_prefix("sub")
-		elif trimmed_text.begins_with("function"):
-			button_name = trimmed_text.trim_prefix("function")
-		
-		var add_button:Button = make_shortcut_button(button_name, bookmarks)
-		function_list.add_child(add_button)
+		for each_func:StringName in function_array.keys():
+			var func_info:FunctionInfo = function_array.get(each_func)
+			if func_info.start_line == bookmarks:
+				function_array.erase(each_func)
+				
+				var add_button:Button = make_shortcut_button(each_func, bookmarks)
+				function_list.add_child(add_button)
 
 func jump_shortcut(line:int) -> void:
 	code_space.set_line_as_first_visible(line)
@@ -65,3 +67,15 @@ func make_shortcut_button(button_name:String, line:int) -> Button:
 	new_button.alignment = HORIZONTAL_ALIGNMENT_LEFT
 	new_button.connect("pressed", jump_shortcut.bind(line))
 	return new_button
+
+
+func _on_retro_script_symbol_validate(symbol: String) -> void:
+	pass # Replace with function body.
+
+
+func _on_retro_script_symbol_lookup(symbol: String, line: int, column: int) -> void:
+	pass # Replace with function body.
+
+
+func _on_retro_script_code_completion_requested() -> void:
+	pass # Replace with function body.

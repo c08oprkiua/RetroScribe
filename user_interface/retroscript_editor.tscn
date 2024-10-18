@@ -48,6 +48,7 @@ symbol_lookup_on_click = true
 gutters_draw_bookmarks = true
 gutters_draw_line_numbers = true
 gutters_zero_pad_line_numbers = true
+code_completion_enabled = true
 script = ExtResource("3_1l6p3")
 
 [node name="Info" type="HBoxContainer" parent="UISplit/CodeEditor"]

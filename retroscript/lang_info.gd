@@ -7,8 +7,6 @@ class_name RetroScriptSpec
 @export_group("Strings")
 ##The keywords of the RetroScript spec, such as function declarations and end statements.
 @export var keywords:PackedStringArray
-
-@export var event_declaration:String
 ##The names and information for all recognized event callback functions.
 @export var events:Dictionary[StringName, FunctionInfo]
 ##The names and information for all built in functions.
@@ -20,7 +18,7 @@ class_name RetroScriptSpec
 ##The names and information for all built in variables.
 @export var engine_variables:Dictionary[StringName, VarInfo]
 ##The names and information for all built in engine objects.
-@export var engine_objects:Dictionary[StringName, Dictionary]
+@export var engine_objects:Dictionary[StringName, ObjectInfo]
 
 @export_group("Syntax Colors", "color_")
 @export var color_func:Color = Color.ROYAL_BLUE
@@ -30,7 +28,7 @@ class_name RetroScriptSpec
 @export var color_member_var:Color = Color.AQUA
 
 ##Configure a [CodeHighlighter] with this spec's information.
-func configure(highlight:CodeHighlighter = CodeHighlighter.new()) -> CodeHighlighter:
+func configure(highlight:CodeHighlighter) -> void:
 	for funcs:String in functions.keys():
 		highlight.add_keyword_color(funcs, color_func)
 	
@@ -56,5 +54,3 @@ func configure(highlight:CodeHighlighter = CodeHighlighter.new()) -> CodeHighlig
 	highlight.member_variable_color = color_member_var
 	highlight.number_color = color_math
 	highlight.symbol_color = Color.WEB_GRAY
-	
-	return highlight

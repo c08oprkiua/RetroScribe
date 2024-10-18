@@ -50,16 +50,30 @@ class LogWarn:
 var errors:Array[LogError]
 var warnings:Array[LogWarn]
 
+var local_aliases:Dictionary[String, String] = {}
+
+var local_functions:Dictionary[StringName, FunctionInfo]
+
 var current_line:int
 
 var lang_db:RetroScriptSpec = RetroScriptSpec.new()
 
 var retroscript_highlighter:CodeHighlighter = CodeHighlighter.new()
 
+func _ready() -> void:
+	connect(&"symbol_lookup", _on_symbol_lookup)
+	connect(&"symbol_validate", validate_symbol)
+
 func add_warning(line:int, warn_type:int) -> void:
+	var new_warn:LogWarn = LogWarn.new()
+	new_warn.line = line
+	new_warn.type = warn_type
+	
 	match warn_type:
 		_:
-			push_warning("Warning for something on line ", line)
+			new_warn.error_text = "Warning for something on line " + str(line)
+	
+	warnings.append(new_warn)
 
 func add_error(error_type:int, line:int = current_line) -> void:
 	var new_err:LogError = LogError.new()
@@ -76,7 +90,8 @@ func add_error(error_type:int, line:int = current_line) -> void:
 			new_err.error_text = "The function on line " + str(line) + " could not be found as a valid builtin function"
 		_:
 			new_err.error_text = "No description implemented for error on line " + str(line) + " with error number " + str(error_type)
-	push_error(new_err.error_text)
+	errors.append(new_err)
+	#push_error(new_err.error_text)
 
 @warning_ignore("unused_parameter")
 func parse_script_text(start_line:int = 0, end_line:int = get_line_count()) -> void:
@@ -89,6 +104,9 @@ func setup_retroscript_editor() -> void:
 	
 	retroscript_highlighter = CodeHighlighter.new()
 	
+	local_aliases.clear()
+	local_functions.clear()
+	
 	lang_db.configure(retroscript_highlighter)
 	
 	if not has_comment_delimiter("/"):
@@ -96,9 +114,17 @@ func setup_retroscript_editor() -> void:
 	
 	parse_script_text()
 	syntax_highlighter = retroscript_highlighter
+	text_changed.emit()
 	compiler_info_updated.emit()
 
 func when_lines_edited(from_line:int, to_line:int) -> void:
 	parse_script_text(from_line, to_line)
 	syntax_highlighter = retroscript_highlighter
 	compiler_info_updated.emit()
+
+func _on_symbol_lookup(symbol:String, line:int, column:int) -> void:
+	printt(symbol, line, column)
+
+func validate_symbol(symbol:String) -> void:
+	printt("Symbol", symbol)
+	set_symbol_lookup_word_as_valid(true)

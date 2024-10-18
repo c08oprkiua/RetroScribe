@@ -10,6 +10,7 @@ func _ready() -> void:
 	Central.connect("switch_tab", change_tab)
 	
 	Central.languages[&"RSDKv3"] = load("res://retroscript/specs/RSDKv3.tres") as Resource
+	Central.languages[&"RSDKv4"] = load("res://retroscript/specs/RSDKv4.tres") as Resource
 
 func _on_open_pressed() -> void:
 	script_open_dialog.show()
