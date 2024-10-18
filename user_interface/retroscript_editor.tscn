@@ -22,17 +22,19 @@ script = ExtResource("1_y6e58")
 layout_mode = 2
 split_offset = 70
 
-[node name="Scroll" type="ScrollContainer" parent="UISplit"]
+[node name="LeftBar" type="VBoxContainer" parent="UISplit"]
 layout_mode = 2
+
+[node name="WhichLang" type="OptionButton" parent="UISplit/LeftBar"]
+layout_mode = 2
+alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="UISplit/LeftBar"]
+layout_mode = 2
+size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="List" type="VBoxContainer" parent="UISplit/Scroll"]
-layout_mode = 2
-
-[node name="WhichLang" type="OptionButton" parent="UISplit/Scroll/List"]
-layout_mode = 2
-
-[node name="FunctionList" type="VBoxContainer" parent="UISplit/Scroll/List"]
+[node name="FunctionList" type="VBoxContainer" parent="UISplit/LeftBar/Scroll"]
 layout_mode = 2
 
 [node name="CodeEditor" type="VBoxContainer" parent="UISplit"]
@@ -55,20 +57,69 @@ script = ExtResource("3_1l6p3")
 visible = false
 layout_mode = 2
 
+[node name="DescLabel" type="Label" parent="UISplit/CodeEditor/Info"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Documentation:"
+vertical_alignment = 1
+
 [node name="Description" type="Label" parent="UISplit/CodeEditor/Info"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 vertical_alignment = 1
 
+[node name="ValLabel" type="Label" parent="UISplit/CodeEditor/Info"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Value:"
+vertical_alignment = 1
+
 [node name="Value" type="Label" parent="UISplit/CodeEditor/Info"]
 layout_mode = 2
-size_flags_horizontal = 3
 size_flags_vertical = 1
 horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="SearchBox" type="HBoxContainer" parent="UISplit/CodeEditor"]
+visible = false
 layout_mode = 2
 
-[connection signal="item_selected" from="UISplit/Scroll/List/WhichLang" to="." method="_on_which_lang_item_selected"]
+[node name="Categories" type="VBoxContainer" parent="UISplit/CodeEditor/SearchBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Replace" type="HBoxContainer" parent="UISplit/CodeEditor/SearchBox/Categories"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UISplit/CodeEditor/SearchBox/Categories/Replace"]
+layout_mode = 2
+text = "Replace: "
+
+[node name="Input" type="LineEdit" parent="UISplit/CodeEditor/SearchBox/Categories/Replace"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Input text here"
+
+[node name="Find" type="HBoxContainer" parent="UISplit/CodeEditor/SearchBox/Categories"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UISplit/CodeEditor/SearchBox/Categories/Find"]
+layout_mode = 2
+text = "Find: "
+
+[node name="Input" type="LineEdit" parent="UISplit/CodeEditor/SearchBox/Categories/Find"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Input text here"
+
+[node name="MatchCase" type="CheckBox" parent="UISplit/CodeEditor/SearchBox"]
+layout_mode = 2
+text = "Match Case"
+
+[node name="Go!" type="Button" parent="UISplit/CodeEditor/SearchBox"]
+layout_mode = 2
+toggle_mode = true
+text = "Go!"
+
+[connection signal="item_selected" from="UISplit/LeftBar/WhichLang" to="." method="_on_which_lang_item_selected"]

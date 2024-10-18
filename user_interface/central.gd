@@ -18,11 +18,15 @@ enum {
 var languages:Dictionary[StringName, RetroScriptSpec] = {
 	&"RSDKv3": RetroScriptSpec.new(),
 	&"RSDKv4": RetroScriptSpec.new(),
-	&"Foreverv4": RetroScriptSpec.new(),
+	&"Forever v4": RetroScriptSpec.new(),
 }
 
 @warning_ignore("unused_signal")
 signal switch_tab(to:int)
+@warning_ignore("unused_signal")
+signal save_active
+@warning_ignore("unused_signal")
+signal save_all
 
 func load_settings_from_ini() -> void:
 	var conf:ConfigFile = ConfigFile.new()

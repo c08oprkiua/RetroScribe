@@ -1,0 +1,2098 @@
+[gd_resource type="Resource" script_class="RetroScriptSpec" load_steps=217 format=3 uid="uid://chv433tjjgwik"]
+
+[ext_resource type="Script" path="res://retroscript/object_info.gd" id="1_5iyd6"]
+[ext_resource type="Script" path="res://retroscript/var_info.gd" id="2_fpe14"]
+[ext_resource type="Script" path="res://retroscript/func_info.gd" id="3_3fv54"]
+[ext_resource type="Script" path="res://retroscript/lang_info.gd" id="4_pmcnm"]
+
+[sub_resource type="Resource" id="Resource_ehbkn"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_mn8i2"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_4i1dj"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_bwoqb"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_s8sxa"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_00fp4"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_j8odv"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ppyc3"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_a8t0m"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_rrgys"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_dmj20"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_le6l3"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_0ohpb"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_wifv1"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_2q34m"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_r3gmr"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_vs0v4"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_dxwxo"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_rklgx"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_mlrow"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_npwbv"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_cb1mj"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_dh18q"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_evnuo"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_6yfbl"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_t5xmu"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ws5kj"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_qpjbw"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_p5yhc"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_hkgrv"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_kpy4l"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ugabv"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_iakyu"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_02q82"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_s04tp"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_kl2mw"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_nsj2t"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_b46i2"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_it7xi"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_u73ms"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_8phfq"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_5p33t"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_jcies"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_oyvs6"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ci2w8"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_f0cpm"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ew576"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_qb4dk"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_c76is"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_t23nh"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_iy1xr"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_o2vae"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ijod7"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_tpde7"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_8k42f"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ay6ty"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_75tvi"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_qnpdx"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_4y1dm"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_0mlib"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_a6uta"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_6ak3h"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_7cjm4"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ecqde"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_sc48i"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_eh7fg"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_1uhj7"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_xhkjh"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_im6yk"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_drlg8"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_hx0ay"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_tsjf3"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_3j3cg"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_uajnw"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_clu5l"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_1a1ev"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_k1v84"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_vuqvn"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_v4o6l"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ssrht"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ev6p1"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_hp27v"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_clskt"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_nogde"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_pvlp5"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_tlrb1"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_tk0d6"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_vv7b0"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ekcea"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ckoom"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_mdbep"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_gm65a"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_84703"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_j8ilv"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_huuke"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_53fu7"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_yguph"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_cf4nj"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_0ocae"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_bivxj"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ve3ix"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_is7ed"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_t8l5g"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"left": SubResource("Resource_ehbkn"),
+&"right": SubResource("Resource_mn8i2"),
+&"angle": SubResource("Resource_4i1dj"),
+&"direction": SubResource("Resource_bwoqb"),
+&"scale": SubResource("Resource_s8sxa"),
+&"type": SubResource("Resource_00fp4"),
+&"priority": SubResource("Resource_j8odv"),
+&"state": SubResource("Resource_ppyc3"),
+&"visible": SubResource("Resource_a8t0m"),
+&"speed": SubResource("Resource_rrgys"),
+&"frame": SubResource("Resource_dmj20"),
+&"up": SubResource("Resource_le6l3"),
+&"animation": SubResource("Resource_2q34m"),
+&"down": SubResource("Resource_wifv1"),
+&"rotation": SubResource("Resource_0ohpb"),
+&"gravity": SubResource("Resource_r3gmr"),
+&"scrollTracking": SubResource("Resource_t23nh"),
+&"collisionLeft": SubResource("Resource_pvlp5"),
+&"floorSensorLC": SubResource("Resource_tpde7"),
+&"value12": SubResource("Resource_j8ilv"),
+&"collisionPlane": SubResource("Resource_xhkjh"),
+&"spriteSheet": SubResource("Resource_it7xi"),
+&"value36": SubResource("Resource_oyvs6"),
+&"jumpPress": SubResource("Resource_hp27v"),
+&"jumpHold": SubResource("Resource_vv7b0"),
+&"value11": SubResource("Resource_1uhj7"),
+&"value16": SubResource("Resource_kpy4l"),
+&"drawOrder": SubResource("Resource_ew576"),
+&"value6": SubResource("Resource_vuqvn"),
+&"value24": SubResource("Resource_a6uta"),
+&"value10": SubResource("Resource_v4o6l"),
+&"value27": SubResource("Resource_0mlib"),
+&"iypos": SubResource("Resource_qnpdx"),
+&"value9": SubResource("Resource_cf4nj"),
+&"value35": SubResource("Resource_u73ms"),
+&"value45": SubResource("Resource_nsj2t"),
+&"value29": SubResource("Resource_tlrb1"),
+&"value41": SubResource("Resource_1a1ev"),
+&"value19": SubResource("Resource_75tvi"),
+&"lookPosY": SubResource("Resource_t5xmu"),
+&"value21": SubResource("Resource_ssrht"),
+&"value44": SubResource("Resource_im6yk"),
+&"value3": SubResource("Resource_b46i2"),
+&"yvel": SubResource("Resource_clu5l"),
+&"alpha": SubResource("Resource_uajnw"),
+&"value26": SubResource("Resource_k1v84"),
+&"value14": SubResource("Resource_ci2w8"),
+&"value31": SubResource("Resource_tk0d6"),
+&"interaction": SubResource("Resource_8k42f"),
+&"ypos": SubResource("Resource_3j3cg"),
+&"value23": SubResource("Resource_ay6ty"),
+&"collisionRight": SubResource("Resource_5p33t"),
+&"value15": SubResource("Resource_mdbep"),
+&"value0": SubResource("Resource_iy1xr"),
+&"xvel": SubResource("Resource_qb4dk"),
+&"value42": SubResource("Resource_c76is"),
+&"value32": SubResource("Resource_eh7fg"),
+&"prevAnimation": SubResource("Resource_f0cpm"),
+&"value17": SubResource("Resource_jcies"),
+&"value37": SubResource("Resource_kl2mw"),
+&"animationTimer": SubResource("Resource_qpjbw"),
+&"xpos": SubResource("Resource_8phfq"),
+&"animationSpeed": SubResource("Resource_ijod7"),
+&"value43": SubResource("Resource_iakyu"),
+&"pushing": SubResource("Resource_6ak3h"),
+&"value5": SubResource("Resource_ws5kj"),
+&"lookPosX": SubResource("Resource_p5yhc"),
+&"value30": SubResource("Resource_o2vae"),
+&"collisionBottom": SubResource("Resource_bivxj"),
+&"value7": SubResource("Resource_ekcea"),
+&"value2": SubResource("Resource_ev6p1"),
+&"value46": SubResource("Resource_ckoom"),
+&"entityPos": SubResource("Resource_0ocae"),
+&"tileCollisions": SubResource("Resource_ugabv"),
+&"floorSensorC": SubResource("Resource_clskt"),
+&"floorSensorRC": SubResource("Resource_s04tp"),
+&"value40": SubResource("Resource_huuke"),
+&"propertyValue": SubResource("Resource_ecqde"),
+&"value8": SubResource("Resource_ve3ix"),
+&"floorSensorL": SubResource("Resource_gm65a"),
+&"value33": SubResource("Resource_84703"),
+&"outOfBounds": SubResource("Resource_hkgrv"),
+&"controlMode": SubResource("Resource_53fu7"),
+&"value4": SubResource("Resource_hx0ay"),
+&"value34": SubResource("Resource_evnuo"),
+&"inkEffect": SubResource("Resource_npwbv"),
+&"value18": SubResource("Resource_tsjf3"),
+&"groupID": SubResource("Resource_yguph"),
+&"collisionTop": SubResource("Resource_mlrow"),
+&"value47": SubResource("Resource_6yfbl"),
+&"value25": SubResource("Resource_cb1mj"),
+&"value38": SubResource("Resource_rklgx"),
+&"value39": SubResource("Resource_vs0v4"),
+&"value13": SubResource("Resource_dh18q"),
+&"value20": SubResource("Resource_dxwxo"),
+&"floorSensorR": SubResource("Resource_is7ed"),
+&"collisionMode": SubResource("Resource_4y1dm"),
+&"controlLock": SubResource("Resource_02q82"),
+&"value28": SubResource("Resource_drlg8"),
+&"value1": SubResource("Resource_7cjm4"),
+&"ixpos": SubResource("Resource_sc48i"),
+&"value22": SubResource("Resource_nogde")
+})
+description = ""
+
+[sub_resource type="Resource" id="Resource_nw3fi"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_lcegn"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_uq3sp"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_fwv7n"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_6ivon"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_5lf6y"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_diljy"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_830h7"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_3e6k2"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_5ltjr"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_kif2s"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_gtah1"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_1kitu"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_4raud"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_q5m46"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_25gkc"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_c21vf"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_s6col"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_sukl5"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_lwbno"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_3q6y5"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_a4xmc"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_i8l7s"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_cni85"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_pgnfl"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_t8b25"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_jhojj"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ebv6d"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ux6ap"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"state": SubResource("Resource_nw3fi"),
+&"seconds": SubResource("Resource_lcegn"),
+&"entityPos": SubResource("Resource_4raud"),
+&"deformationData1": SubResource("Resource_fwv7n"),
+&"newYBoundary2": SubResource("Resource_kif2s"),
+&"deformationData2": SubResource("Resource_830h7"),
+&"newYBoundary1": SubResource("Resource_diljy"),
+&"curXBoundary1": SubResource("Resource_3e6k2"),
+&"actNum": SubResource("Resource_6ivon"),
+&"waterLevel": SubResource("Resource_1kitu"),
+&"newXBoundary2": SubResource("Resource_uq3sp"),
+&"newXBoundary1": SubResource("Resource_5lf6y"),
+&"curXBoundary2": SubResource("Resource_gtah1"),
+&"debugMode": SubResource("Resource_5ltjr"),
+&"listPos": SubResource("Resource_q5m46"),
+&"curYBoundary1": SubResource("Resource_25gkc"),
+&"midPoint": SubResource("Resource_c21vf"),
+&"activeLayer": SubResource("Resource_s6col"),
+&"listSize": SubResource("Resource_sukl5"),
+&"minutes": SubResource("Resource_lwbno"),
+&"milliSeconds": SubResource("Resource_3q6y5"),
+&"playerListPos": SubResource("Resource_a4xmc"),
+&"timeEnabled": SubResource("Resource_i8l7s"),
+&"deformationData3": SubResource("Resource_cni85"),
+&"deformationData0": SubResource("Resource_pgnfl"),
+&"curYBoundary2": SubResource("Resource_t8b25"),
+&"pauseEnabled": SubResource("Resource_jhojj"),
+&"activeList": SubResource("Resource_ebv6d")
+})
+description = ""
+
+[sub_resource type="Resource" id="Resource_eewtp"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_4blm2"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ygx1o"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_u0si7"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_eow0d"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_75c7w"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_nn7mr"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"d": SubResource("Resource_eewtp"),
+&"b": SubResource("Resource_4blm2"),
+&"a": SubResource("Resource_ygx1o"),
+&"color": SubResource("Resource_u0si7"),
+&"c": SubResource("Resource_eow0d"),
+&"flag": SubResource("Resource_75c7w")
+})
+description = ""
+
+[sub_resource type="Resource" id="Resource_n3gfc"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_lhbks"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_khcht"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_47jro"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_v32du"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"down": SubResource("Resource_lhbks"),
+&"ypos": SubResource("Resource_47jro"),
+&"xpos": SubResource("Resource_khcht")
+})
+description = ""
+
+[sub_resource type="Resource" id="Resource_sif7t"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_k0pf2"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_ws1jq"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_se1jp"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_yahsc"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"selection": SubResource("Resource_se1jp")
+})
+description = ""
+
+[sub_resource type="Resource" id="Resource_6fq5s"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_dixqq"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_2c1t2"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_bgwtd"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_nmco0"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_lkxxf"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_qlai3"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"projectionX": SubResource("Resource_dixqq"),
+&"vertexCount": SubResource("Resource_bgwtd"),
+&"fogColor": SubResource("Resource_6fq5s"),
+&"projectionY": SubResource("Resource_nmco0"),
+&"faceCount": SubResource("Resource_lkxxf"),
+&"fogStrength": SubResource("Resource_2c1t2")
+})
+description = ""
+
+[sub_resource type="Resource" id="Resource_gp6uk"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_w5x8x"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_hsk58"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_gur4w"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"scrollSpeed": SubResource("Resource_gp6uk"),
+&"scrollPos": SubResource("Resource_w5x8x"),
+&"parallaxFactor": SubResource("Resource_hsk58")
+})
+description = ""
+
+[sub_resource type="Resource" id="Resource_x6gbr"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_58dwt"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_btotj"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_265id"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_jjbyj"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_vjiqe"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_85j67"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_kd380"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_7qjq4"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_i1m4c"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_7hyf1"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_yoh3d"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ugikd"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"angle": SubResource("Resource_x6gbr"),
+&"type": SubResource("Resource_58dwt"),
+&"ypos": SubResource("Resource_vjiqe"),
+&"xpos": SubResource("Resource_btotj"),
+&"scrollSpeed": SubResource("Resource_265id"),
+&"deformationOffsetW": SubResource("Resource_85j67"),
+&"xsize": SubResource("Resource_7hyf1"),
+&"scrollPos": SubResource("Resource_jjbyj"),
+&"deformationOffset": SubResource("Resource_7qjq4"),
+&"parallaxFactor": SubResource("Resource_kd380"),
+&"zpos": SubResource("Resource_yoh3d"),
+&"ysize": SubResource("Resource_i1m4c")
+})
+description = ""
+
+[sub_resource type="Resource" id="Resource_s38rw"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_o7ngw"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_6ow8y"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ndc63"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_y2j1u"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_3fxro"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_v6asi"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_grxqt"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_f8haf"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_yntau"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_sn2pk"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_kd3r5"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_7yei7"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_d176y"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_gcigm"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_ueb0x"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"left": SubResource("Resource_o7ngw"),
+&"right": SubResource("Resource_6ow8y"),
+&"start": SubResource("Resource_ndc63"),
+&"select": SubResource("Resource_y2j1u"),
+&"up": SubResource("Resource_3fxro"),
+&"down": SubResource("Resource_v6asi"),
+&"buttonX": SubResource("Resource_7yei7"),
+&"buttonC": SubResource("Resource_gcigm"),
+&"buttonY": SubResource("Resource_yntau"),
+&"buttonR": SubResource("Resource_grxqt"),
+&"buttonZ": SubResource("Resource_d176y"),
+&"buttonL": SubResource("Resource_f8haf"),
+&"buttonA": SubResource("Resource_kd3r5"),
+&"buttonB": SubResource("Resource_sn2pk")
+})
+description = ""
+
+[sub_resource type="Resource" id="Resource_od43v"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_1udnq"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_s7w6l"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_hcpmr"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_2hg5h"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_asotv"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_hcgf4"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"x": SubResource("Resource_1udnq"),
+&"z": SubResource("Resource_s7w6l"),
+&"y": SubResource("Resource_hcpmr"),
+&"v": SubResource("Resource_2hg5h"),
+&"u": SubResource("Resource_asotv")
+})
+description = ""
+
+[sub_resource type="Resource" id="Resource_rf7mj"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_8ivan"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_8ouxm"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_lrhjy"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_hldts"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_csn41"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_tgep2"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_f2ur6"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"position": SubResource("Resource_hldts"),
+&"volume": SubResource("Resource_csn41"),
+&"currentTrack": SubResource("Resource_tgep2")
+})
+description = ""
+
+[sub_resource type="Resource" id="Resource_f5cxa"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_1d0vd"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_we7ka"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_sufp0"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_6ghn7"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_g170x"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+description = ""
+
+[sub_resource type="Resource" id="Resource_dvsgq"]
+script = ExtResource("2_fpe14")
+name = &""
+type = 0
+access = 0
+value = 0
+enum_parent = &""
+description = ""
+
+[sub_resource type="Resource" id="Resource_7amfo"]
+script = ExtResource("1_5iyd6")
+variables = Dictionary[StringName, ExtResource("2_fpe14")]({
+&"selection": SubResource("Resource_dvsgq")
+})
+description = ""
+
+[resource]
+script = ExtResource("4_pmcnm")
+alias_max_count = 136
+keywords = PackedStringArray("alias", "platform", "endplatform", "end", "event", "endevent", "function", "endfunction", "if", "else", "endif", "switch", "case", "break", "endswitch", "for", "while", "loop", "table", "endtable", "public", "private", "value", "reserve", "")
+events = Dictionary[StringName, ExtResource("3_3fv54")]({})
+functions = Dictionary[StringName, ExtResource("3_3fv54")]({})
+aliases = Dictionary[String, StringName]({
+"": &"",
+"BONUS_STAGE": &"2",
+"C_BOX": &"65536",
+"C_PLATFORM": &"3",
+"C_SOLID": &"1",
+"C_TOUCH": &"0",
+"DEVICE_ANDROID": &"5",
+"DEVICE_IOS": &"4",
+"DEVICE_PSN": &"3",
+"DEVICE_XBOX": &"2",
+"FACING_LEFT": &"1",
+"FACING_RIGHT": &"0",
+"FX_FLIP": &"5",
+"FX_INK": &"3",
+"FX_ROTATE": &"1",
+"FX_ROTOZOOM": &"2",
+"FX_SCALE": &"0",
+"MAT_TEMP": &"2",
+"MAT_VIEW": &"1",
+"MAT_WORLD": &"0",
+"MENU_1": &"0",
+"MENU_2": &"1",
+"MOBILE": &"1",
+"PRESENTATION_STAGE": &"0",
+"REGULAR_STAGE": &"1",
+"RESET_GAME": &"2",
+"SPECIAL_STAGE": &"3",
+"STAGE_2P_MODE": &"4",
+"STAGE_FROZEN": &"3",
+"STAGE_PAUSED": &"2",
+"STAGE_RUNNING": &"1",
+"STANDARD": &"0",
+"false": &"0",
+"true": &"1"
+})
+math_shorthands = {
+"!=": &"IfNotEqual",
+"%=": &"Mod",
+"&=": &"And",
+"*=": &"Mul",
+"++": &"Inc",
+"+=": &"Add",
+"--": &"Dec",
+"-=": &"Sub",
+"/=": &"Div",
+"<": &"IfLower",
+"<<=": &"ShL",
+"<=": &"IfLowerOrEqual",
+"=": &"Equal",
+"==": &"IfEqual",
+">": &"IfGreater",
+">=": &"IfGreaterOrEqual",
+">>=": &"ShR",
+"^=": &"Xor",
+"|=": &"Or"
+}
+engine_variables = Dictionary[StringName, ExtResource("2_fpe14")]({})
+engine_objects = Dictionary[StringName, ExtResource("1_5iyd6")]({
+&"object": SubResource("Resource_t8l5g"),
+&"stage": SubResource("Resource_ux6ap"),
+&"touchscreen": SubResource("Resource_v32du"),
+&"temp7": SubResource("Resource_n3gfc"),
+&"arrayPos3": SubResource("Resource_sif7t"),
+&"temp6": SubResource("Resource_k0pf2"),
+&"temp1": SubResource("Resource_ws1jq"),
+&"faceBuffer": SubResource("Resource_nn7mr"),
+&"menu1": SubResource("Resource_yahsc"),
+&"scene3D": SubResource("Resource_qlai3"),
+&"vParallax": SubResource("Resource_gur4w"),
+&"tileLayer": SubResource("Resource_ugikd"),
+&"arrayPos0": SubResource("Resource_s38rw"),
+&"keyPress": SubResource("Resource_ueb0x"),
+&"arrayPos1": SubResource("Resource_od43v"),
+&"vertexBuffer": SubResource("Resource_hcgf4"),
+&"temp3": SubResource("Resource_rf7mj"),
+&"arrayPos4": SubResource("Resource_8ivan"),
+&"arrayPos5": SubResource("Resource_8ouxm"),
+&"temp4": SubResource("Resource_lrhjy"),
+&"music": SubResource("Resource_f2ur6"),
+&"temp0": SubResource("Resource_f5cxa"),
+&"arrayPos7": SubResource("Resource_1d0vd"),
+&"arrayPos6": SubResource("Resource_we7ka"),
+&"temp2": SubResource("Resource_sufp0"),
+&"arrayPos2": SubResource("Resource_6ghn7"),
+&"temp5": SubResource("Resource_g170x"),
+&"menu2": SubResource("Resource_7amfo")
+})
+color_func = Color(0.241848, 0.501473, 0.536487, 1)
+color_math = Color(0.809145, 9.43363e-06, 0.511026, 1)
+color_keyword = Color(0.935737, 0.244118, 0.151275, 1)
+color_member = Color(0.453607, 0.605547, 0.150139, 1)
+color_member_var = Color(5.29438e-05, 0.467331, 0.971681, 1)

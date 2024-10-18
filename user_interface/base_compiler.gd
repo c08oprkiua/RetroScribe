@@ -60,10 +60,6 @@ var lang_db:RetroScriptSpec = RetroScriptSpec.new()
 
 var retroscript_highlighter:CodeHighlighter = CodeHighlighter.new()
 
-func _ready() -> void:
-	connect(&"symbol_lookup", _on_symbol_lookup)
-	connect(&"symbol_validate", validate_symbol)
-
 func add_warning(line:int, warn_type:int) -> void:
 	var new_warn:LogWarn = LogWarn.new()
 	new_warn.line = line
@@ -99,8 +95,10 @@ func parse_script_text(start_line:int = 0, end_line:int = get_line_count()) -> v
 
 ##Sets up all the syntax detection for constants and builtins
 func setup_retroscript_editor() -> void:
-	if not is_connected("lines_edited_from", when_lines_edited):
-		connect("lines_edited_from", when_lines_edited)
+	if not is_connected(&"lines_edited_from", when_lines_edited):
+		connect(&"lines_edited_from", when_lines_edited)
+	
+	
 	
 	retroscript_highlighter = CodeHighlighter.new()
 	
@@ -121,10 +119,3 @@ func when_lines_edited(from_line:int, to_line:int) -> void:
 	parse_script_text(from_line, to_line)
 	syntax_highlighter = retroscript_highlighter
 	compiler_info_updated.emit()
-
-func _on_symbol_lookup(symbol:String, line:int, column:int) -> void:
-	printt(symbol, line, column)
-
-func validate_symbol(symbol:String) -> void:
-	printt("Symbol", symbol)
-	set_symbol_lookup_word_as_valid(true)

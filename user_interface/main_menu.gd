@@ -4,9 +4,13 @@ extends VBoxContainer
 @onready var gui_tabs:TabContainer = $"MainSpace"
 @onready var script_open_dialog:FileDialog = $"OpenAScript"
 
+@onready var file_menu:MenuButton = $"GlobalBar/File"
+@onready var panel_settings:MenuButton = $"GlobalBar/PanelSettings"
+
 
 func _ready() -> void:
 	script_open_dialog.connect(&"file_selected", validate_file)
+	file_menu.get_popup().connect(&"index_pressed", file_settings_select)
 	Central.connect("switch_tab", change_tab)
 	
 	Central.languages[&"RSDKv3"] = load("res://retroscript/specs/RSDKv3.tres") as Resource
@@ -23,6 +27,16 @@ func _on_settings_pressed() -> void:
 
 func change_tab(to:int) -> void:
 	gui_tabs.current_tab = clampi(to, 0, 4)
+
+func file_settings_select(index:int) -> void:
+	match index:
+		0:
+			_on_open_pressed()
+		1:
+			pass
+
+func panel_settings_select(index:int) -> void:
+	pass
 
 func validate_file(path:String) -> void:
 	print("Opening file... ", path)
